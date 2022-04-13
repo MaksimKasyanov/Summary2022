@@ -1,11 +1,17 @@
-document.querySelector("button").addEventListener("click", menu);
-
+document.querySelector(".burger").addEventListener("click", menu);
 function menu() {
 	let burger = document.querySelector(".burger");
 	burger.classList.toggle("burger__cross");
 	let menu = document.querySelector(".menu");
 	menu.classList.toggle("menu__active");
 }
+
+document.querySelector(".theme-btn").addEventListener("click", themeSwitcer);
+function themeSwitcer() {
+	let theme = document.querySelector(".theme-btn");
+	theme.classList.toggle("theme-btn__active");
+}
+
 
 
 VANTA.FOG({
