@@ -1,34 +1,30 @@
-// VANTA.FOG({
-// 	el: "#intro",
-// 	minHeight: 200.00,
-// 	minWidth: 200.00,
-// 	highlightColor: 0xffffff,
-// 	midtoneColor: 0x0,
-// 	lowlightColor: 0x0,
-// 	baseColor: 0x0,
-// 	blurFactor: 0.23,
-// 	zoom: 1.80
-// });
+document.querySelector("button").addEventListener("click", menu);
 
-VANTA.TOPOLOGY({
-	el: "#intro",
-	mouseControls: false,
-	touchControls: false,
-	minHeight: 200.00,
-	minWidth: 200.00,
-	scale: 2.00,
-	scaleMobile: 0.60,
-	color: 0xfff00,
-	backgroundColor: 0x171818
- });
+function menu() {
+	let burger = document.querySelector(".burger");
+	burger.classList.toggle("burger__cross");
+	let menu = document.querySelector(".menu");
+	menu.classList.toggle("menu__active");
+}
+
+
 VANTA.FOG({
 	el: "#portfolio",
-	highlightColor: 0xff00,
-	midtoneColor: 0x337533,
+	highlightColor: 0x0,
+	midtoneColor: 0x21fd7e,
 	lowlightColor: 0x0,
 	baseColor: 0x0,
 	blurFactor: 0.29,
-	speed: 1.40,
-	zoom: 1.90
+	speed: 1.50
+});
+
+VANTA.FOG({
+	el: "#feedback",
+	highlightColor: 0x0,
+	midtoneColor: 0x21fd7e,
+	lowlightColor: 0x0,
+	baseColor: 0x0,
+	blurFactor: 0.29,
+	speed: 1.50
 });
 

@@ -11,13 +11,32 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="css/bg-style.css"> -->
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
 </head>
 
 <body >
 	<header class="header">
-		<h1 class="header__title">HEADER</h1>
+		<button class="burger">
+			<span class="burger__line burger__line1"></span>
+			<span class="burger__line burger__line2"></span>
+			<span class="burger__line burger__line3"></span>
+		</button>
+		<nav class="menu">
+			<ul class="menu__list">
+				<li class="menu__list-item">
+					<a href="#intro" class="menu__list-link">Intro</a>
+				</li>
+				<li class="menu__list-item">
+					<a href="#portfolio" class="menu__list-link">Portfolio</a>
+				</li>
+				<li class="menu__list-item">
+					<a href="#skills" class="menu__list-link">Skills</a>
+				</li>
+				<li class="menu__list-item">
+					<a href="#feedback" class="menu__list-link">Contacts</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 	<main class="main">
 		
@@ -29,12 +48,13 @@
 		<section id="portfolio" class="portfolio">
 			<div class="portfolio__title">Portfolio</div>
 		</section>
+		<section id="skills" class="skills"></section>
+		<section id="feedback" class="feedback"></section>
 	</main>
 
-	<script src="js/p5.min.js"></script>
+
 	<script src="js/three.js"></script>
 	<script src="js/vanta.fog.min.js"></script>
-	<script src="js/vanta.topology.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
