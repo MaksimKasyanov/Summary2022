@@ -20,3 +20,10 @@ function themeSwitcer() {
 }
 
 
+// document.querySelector(".tile").addEventListener("click", tile);
+// function tile() {
+// 	this.document.querySelector(".burger");
+// 	burger.classList.toggle("burger__cross");
+// 	let menu = document.querySelector(".menu");
+// 	menu.classList.toggle("menu__active");
+// }
