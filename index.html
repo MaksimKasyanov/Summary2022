@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Web-developer</title>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap" rel="stylesheet">
@@ -30,6 +30,9 @@
 					<a class="menu__list-link"  href="#portfolio">Customers</a>
 				</li>
 				<li class="menu__list-item">
+					<a class="menu__list-link"  href="#portfolio">Employers</a>
+				</li>
+				<li class="menu__list-item">
 					<button class="menu__list-link">Contacts</button>
 				</li>
 			</ul>
@@ -42,33 +45,38 @@
 		</button>
 	</header>
 	<main class="main">
-		
 		<section class="intro">
 			<p class="intro__text">Hi, my name is</p>
 			<p class="intro__name">Maksim Kasyanov</p>
 			<p class="intro__descr">I’m a front-end developer specializing in creating accessible valid responsive websites. Currently, I’m focused on learning JavaScript.</p>
 			<ul class="intro-btn">
 				<li class="intro-btn__item-button">
-					<button class="intro-btn__button">Contact me!</button>
+					<button on class="intro-btn__button">Contact me!</button>
 				</li>
 				<li class="intro-btn__item intro-btn__item-1">
-					<a class="intro-btn__link" href="#"></a>
+					<a class="intro-btn__link intro-btn__link1" href="tel:+380973710447"></a>
 				</li>
 				<li class="intro-btn__item intro-btn__item-2">
-					<a class="intro-btn__link" href="#"></a>
+					<a class="intro-btn__link intro-btn__link2" href="https://telegram.me/maksim_kasyanov"></a>
 				</li>
 				<li class="intro-btn__item intro-btn__item-3">
-					<a class="intro-btn__link" href="#"></a>
+					<a class="intro-btn__link intro-btn__link3" href="mailto:maksim.kasyanov.1995@gmail.com"></a>
 				</li>
-			
 			</ul>
 		</section>
 
 		<section class="portfolio">
 			<h2 class="portfolio__title">Portfolio</h2>
 			<div class="slider">
-				<div class="slider__img"></div>
-			</div>
+				<div class="portfolio__slider swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide portfolio__slide portfolio__slide-1"></div>
+						<div class="swiper-slide portfolio__slide portfolio__slide-2"></div>
+						<div class="swiper-slide portfolio__slide portfolio__slide-3"></div>
+					</div>
+				</div>
+			<div class="portfolio__bullets"></div>
+		</div>
 		</section>
 
 		<section class="skills">
@@ -145,8 +153,7 @@
 		</section>
 	</main>
 
-
-
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
