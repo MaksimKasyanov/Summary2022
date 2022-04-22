@@ -15,6 +15,16 @@ function themeSwitcer() {
 	theme.classList.toggle("theme__light");
 }
 
+document.querySelector(".feedback__contacts").addEventListener("click", feedbackContacts);
+function feedbackContacts() {
+	let feedbackBtn = document.querySelector(".feedback__form");
+	feedbackBtn.classList.toggle("feedback__form_active");
+	let contactsBtn = document.querySelector(".feedback__contacts");
+	contactsBtn.classList.toggle("feedback__contacts_active");
+	let markBtn = document.querySelector(".feedback__mark");
+	markBtn.classList.toggle("feedback__mark_active");
+}
+
 
 const swiper = new Swiper('.portfolio__slider', {
 	loop: true,
