@@ -31,10 +31,10 @@
 					<button class="menu__list-link">Contacts</button>
 				</li>
 				<li class="menu__list-item">
-					<a class="menu__list-link" href="#">Customers</a>
+					<button class="menu__list-link menu__list-customer">Customers</button>
 				</li>
 				<li class="menu__list-item">
-					<a class="menu__list-link" href="#">Employers</a>
+					<a class="menu__list-link menu__list-employer" href="#">Employers</a>
 				</li>
 				<li class="menu__list-item">
 					<a class="menu__list-link--resume" target="_blank" href="#">Resume</a>
@@ -42,6 +42,57 @@
 			</ul>
 			
 		</nav>
+		<form class="form form__customer" action="#">
+			<button class="form-close form-close__customer"></button>
+		
+				<h3 class="form__title">Please fill the form</h3>
+				<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
+			
+				<input class="form__name" type="text" placeholder="Name">
+				<ul class="form__list">
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--linkedin"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--telegram"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--twitter"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--facebook"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--instagram"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--email"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--whatsapp"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--viber"></button>
+				</li>
+				</ul>
+				<input class="form__address" type="text" placeholder="Please choose an app">
+				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
+				<button class="form__submit">Submit</button>
+		
+		</form>
+		<form class="form form__employer" action="#">
+			<button class="form-close form-close__employer"></button>
+		
+				<h3 class="form__title">Please fill the form</h3>
+				<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
+			
+				<input class="form__name" type="text" placeholder="Name">
+		
+				<input class="form__phone" type="number" placeholder="Phone number">
+				<textarea class="form__text" placeholder="Type here..."></textarea>
+				<button class="form__submit">Submit</button>
+		
+		</form>
 		<button class="theme-btn">
 			<span class="theme-btn__switcher">
 			</span>
@@ -55,7 +106,7 @@
 			<p class="intro__descr">I’m a front-end developer specializing in creating accessible valid responsive websites. Currently, I’m focused on learning JavaScript.</p>
 			<ul class="intro-btn">
 				<li class="intro-btn__item-button">
-					<button on class="intro-btn__button">Contact me!</button>
+					<button class="intro-btn__button">Contact me!</button>
 				</li>
 				<li class="intro-btn__item intro-btn__item-1">
 					<a class="intro-btn__link intro-btn__link1" href="tel:+380973710447"></a>
@@ -154,20 +205,32 @@
 			<p class="feedback__descr">I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
 			<div class="feedback__buttons">
 				<button class="feedback__btn feedback__form">Fill <br> the <br> form</button>
-				<div class="feedback__contacts-box">
-					<div class="feedback__lside">
 
-						<a class="feedback__lside-link" href=""></a>
+				<div class="feedback__contacts">
+					<button class="feedback__btn feedback__btn-contacts">Get my <br> contacts</button>
+					<!-- <div class="feedback__contacts-line feedback__contacts-line1 feedback__contacts-lline">
+						<a class="feedback__contacts-link" href=""></a>
 					</div>
-					<button class="feedback__btn feedback__contacts">Get my <br> contacts</button>
-					<div class="feedback__rside">
-
+					<div class="feedback__contacts-line feedback__contacts-line2 feedback__contacts-lline">
+						<a class="feedback__contacts-link" href=""></a>
 					</div>
+					<div class="feedback__contacts-line feedback__contacts-line3 feedback__contacts-lline">
+						<a class="feedback__contacts-link" href=""></a>
+					</div>
+					<div class="feedback__contacts-line feedback__contacts-line1 feedback__contacts-rline">
+						<a class="feedback__contacts-link" href=""></a>
+					</div>
+					<div class="feedback__contacts-line feedback__contacts-line2 feedback__contacts-rline">
+						<a class="feedback__contacts-link" href=""></a>
+					</div>
+					<div class="feedback__contacts-line feedback__contacts-line3 feedback__contacts-rline">
+						<a class="feedback__contacts-link" href=""></a>
+					</div> -->
 				</div>
 				<button class="feedback__btn feedback__mark">Leave <br> your <br> mark</button>
 			</div>
 		</section>
-		
+
 	</main>
 	<footer class="footer">
 		<span class="footer__copyrights">©Kasyanov Maksim 2022</span>

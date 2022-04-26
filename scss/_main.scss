@@ -33,11 +33,10 @@ h2{
 	position: relative;
 	z-index: 5;
 	width: 30px;
-	height: 20px;
+	height: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 5px 0px;
 	&__line{
 		position: absolute;
 		width: 30px;
@@ -47,16 +46,17 @@ h2{
 	}
 	&__line1{
 		width: 20px;
-		top: 0;
+		top: 5px;
 	}
 	&__line2{
 		transition: all .5s;
-		top: 10px;
+		top: 15px;
 	}
 	&__line3{
-		top: 20px;
+		top: 25px;
 	}
 	&__cross{
+		height: 30px;
 		position: relative;
 		.burger__line1{
 			top: 15px;
@@ -168,6 +168,176 @@ h2{
 		border: 2px solid #21DB7E;
 		box-shadow: 0px 0px 15px #21DB7E;
 		margin-top: 70px;
+	}
+}
+.form-bot{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.form-close{
+	position: absolute;
+	left: 24px;
+	top: 24px;
+	width: 30px;
+	height: 30px;
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 1px;
+		top: 50%;
+		left: 0;
+		transform: rotate(45deg);
+		background-color: #fff;
+	}
+	&::after{
+		transform: rotate(-45deg);
+	}
+}
+
+.form{
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
+	background-color: #181818;
+	text-align: center;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translateY(-100vh);
+	transition: all 0.5s;
+	&__customer{
+		&_active{
+			transform: translateY(0vh);
+		}
+	}
+	&__employer{
+		&_active{
+			transform: translateY(0vh);
+		}
+	}
+	&__title{
+		margin-top: 80px;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	&__subtitle{
+		font-size: 15px;
+		line-height: 20px;
+		font-family: 'M1 PLUS 1';
+		width: 330px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
+	&__name,
+	&__address,
+	&__phone{
+		display: block;
+		width: 100%;
+		max-width: 330px;
+		height: 40px;
+		min-height: 40px;
+		border: 2px solid #21DB7E;
+		padding-left: 20px;
+		margin-bottom: 22px;
+		caret-color: #fff;
+		color: #fff;
+		font-size: 14px;
+		
+		font-family: 'M1 PLUS 1';
+		font-family: 'Russo One', sans-serif;
+		&::-webkit-input-placeholder {
+		}
+	}
+	&__phone::-webkit-outer-spin-button,
+	&__phone::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 330px;
+		margin-bottom: 15px;
+
+	}
+	&__list-item{
+		width: 30px;
+		height: 30px;
+	}
+	&__list-btn{
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 2px solid #21DB7E;
+		color: #181818;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 55%;
+	}
+	&__list-btn--linkedin{
+		background-image: url('../images/linkedin.svg');
+	}
+	&__list-btn--telegram{
+		background-image: url('../images/telegram.svg');
+	}
+	&__list-btn--twitter{
+		background-image: url('../images/twitter.svg');
+	}
+	&__list-btn--facebook{
+		background-image: url('../images/facebook.svg');
+	}
+	&__list-btn--instagram{
+		background-image: url('../images/instagram.svg');
+	}
+	&__list-btn--email{
+		background-image: url('../images/email.svg');
+	}
+	&__list-btn--viber,
+	&__list-btn--whatsapp{
+		background-image: url('../images/viber.svg');
+	}
+	&__address{
+		margin-bottom: 10px;
+	}
+	&__descr{
+		max-width: 330px;
+		font-family: 'M1 PLUS 1';
+		margin-bottom: 40px;
+	}
+	&__submit{
+		display: block;
+		width: 170px;
+		min-height: 50px;
+		color: #fff;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		border: 2px solid #21DB7E;
+		margin-bottom: 70px;
+	}
+	&__text{
+		width: 100%;
+		max-width: 330px;
+		min-height: 100px;
+		border: 2px solid #21DB7E;
+		padding-left: 20px;
+		margin-bottom: 22px;
+		padding-top: 10px;
+		caret-color: #fff;
+		color: #fff;
+		font-size: 14px;
+		font-family: 'Russo One', sans-serif;
 	}
 }
 .intro{
@@ -314,10 +484,12 @@ h2{
 		border-radius: 50%;
 		background-color: #fff;
 		transition: all 0.5s;
+		cursor: pointer;
 		
 	}
 	&__bullet-active{
-		box-shadow: 0px 0px 0px 7px #ffffff3f;
+		box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.438);
+		background-color: #ffffff;
 	}
 	&__slide{
 		width: 230px;
@@ -365,6 +537,8 @@ h2{
 .tile {
 	position: relative;
 	width: calc(50vw - 35px);
+	max-width: 220px;
+	max-height: 220px;
 	height: calc(50vw - 35px);
 	margin-bottom: 25px;
 	box-shadow: inset 0px 0px 15px 5px #101010;
@@ -372,7 +546,9 @@ h2{
 	
 
 	&__wrapper{
+		margin: 0 auto;
 		width: 100%;
+		max-width: 720px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -637,7 +813,7 @@ h2{
 	&__btn {
 		position: absolute;
 		top: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(0%, -50%);
 		width: 80px;
 		height: 80px;
 		color: #fff;
@@ -649,109 +825,83 @@ h2{
 	}
 
 	&__form {
-		left: calc(0% + 40px);
+		left: 0%;
 	}
 	&__form_active{
 		transition-delay: 0.5s;
-		left: 50%;
+		left: calc(50% - 40px);
 	}
-	&__contacts-box{
+	&__btn-contacts{
+		left: calc(50% - 40px);
+		// z-index: 2;
+	}
+	&__contacts{
 		position: absolute;
 		top: 50%;
-		left: 50%;
-		transform: translateY(-50%);
+		left: calc(50% - 40px);
+		transform: translate(0%, -50%);
 		width: 80px;
 		height: 80px;
+		background-color: #fff;
+		z-index: 2;
 	}
-	&__lside,
-	&__rside{
+	&__contacts-link{
 		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		width: 70px;
-		height: 130px;
-	}
-	&__lside{
-		left: -75px;
-
-	}
-	&__rside{
-		right: -64px;
-	}
-	&__lside-line,
-	&__rside-line{
-		position: absolute;
-		z-index: 9;
 		top: 50%;
 		transform: translateY(-50%);
+		display: block;
+		width: 32px;
+		height: 32px;
+		border: 2px solid #21DB7E;
+		z-index: 3;
+		background-color: #181818;
+		transition: all 0.5s;
+		opacity: 1;
+		// height: 1px;
+		background-image: url('../images/telegram.svg');
+		background-position: center center;
+		background-size: 60%;
+		background-repeat: no-repeat;
+	}
+	&__contacts-line{
+		position: absolute;
+		z-index: -2;
+		top: 0%;
+		width: calc(100% + 100px);
+		// width: 100%;
 		height: 2px;
-		width: 0;
-		width: 35px;
 		background-color: #21DB7E;
-		transition: all 1s;
+		transition: all 0.5s;
+
 	}
-	&__lside-line{
+	&__contacts-lline{
 		right: 0;
-		
+		.feedback__contacts-link{
+			left: 0;
+		}
 	}
-	&__rside-line{
+	&__contacts-rline{
 		left: 0;
-	}
-	&__lside-line1,
-	&__rside-line1{
-		top: 0;
-	}
-	&__lside-line3,
-	&__rside-line3{
-		top: 100%;
-	}
-	&__contacts {
-		z-index: 2;
-		&::before,
-		&::after{
-			content: '';
-			position: absolute;
-			width: 2px;
-			height: 80px;
-			top: 50%;
-			transition: all 0.5s;
-			transform: translateY(-50%);
-			background-color: #21DB7E;
+		.feedback__contacts-link{
+			right: 0;
 		}
-		&::before{
+	}
+	&__contacts-line2{
+		top: 50%;
+		transform: translateY(-50%);
+		// width: calc(100% + 60px);
+	}
+	&__contacts-line3{
+		top: calc(100% - 2px);
+	}
 
-			transition-delay: 0s;
-			left: -2px;
-		}
-		&::after{
-			// transition-delay: 0s;
-			right: -2px;
-		}
-
-
-	}
-	
-	&__contacts_active{
-		
-		&::before{
-			transition-delay: 1s;
-			height: 132px;
-			left: -2px;
-		}
-		&::after{
-			height: 132px;
-			transition-delay: 1s;
-			right: -2px;
-		}
-
-	}
 	&__mark {
-		right: calc(0% - 40px);
+		right: 0%;
 	}
 	&__mark_active{
 		transition-delay: .25s;
 		z-index: -1;
-		right: calc(50% - 80px);
+		right: calc(50% - 40px);
 	}
 }
 .footer {

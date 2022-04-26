@@ -15,16 +15,39 @@ function themeSwitcer() {
 	theme.classList.toggle("theme__light");
 }
 
-document.querySelector(".feedback__contacts").addEventListener("click", feedbackContacts);
+document.querySelector(".feedback__btn-contacts").addEventListener("click", feedbackContacts);
 function feedbackContacts() {
 	let feedbackBtn = document.querySelector(".feedback__form");
 	feedbackBtn.classList.toggle("feedback__form_active");
-	let contactsBtn = document.querySelector(".feedback__contacts");
-	contactsBtn.classList.toggle("feedback__contacts_active");
+	let contactsBtn = document.querySelector(".feedback__btn-contacts");
+	contactsBtn.classList.toggle("feedback__btn-contacts_active");
 	let markBtn = document.querySelector(".feedback__mark");
 	markBtn.classList.toggle("feedback__mark_active");
 }
 
+document.querySelector(".menu__list-customer").addEventListener("click", formCustomer);
+function formCustomer() {
+	let customerForm = document.querySelector(".form__customer");
+	customerForm.classList.toggle("form__customer_active");
+}
+
+document.querySelector(".form-close__customer").addEventListener("click", closeFormCustomer);
+function closeFormCustomer() {
+	let customerForm = document.querySelector(".form__customer");
+	customerForm.classList.remove("form__customer_active");
+}
+
+document.querySelector(".menu__list-employer").addEventListener("click", formEmployer);
+function formEmployer() {
+	let employerForm = document.querySelector(".form__employer");
+	employerForm.classList.toggle("form__employer_active");
+}
+
+document.querySelector(".form-close__employer").addEventListener("click", closeFormEmployer);
+function closeFormEmployer() {
+	let feedbackBtn = document.querySelector(".form__employer");
+	feedbackBtn.classList.remove("form__employer_active");
+}
 
 const swiper = new Swiper('.portfolio__slider', {
 	loop: true,

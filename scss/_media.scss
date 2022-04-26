@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+	.tile{
+		&__html{
+			.tile__tside,
+			.tile__lside{
+				display: block;
+			}
+		}
+		&__scss{
+			.tile__tside,
+			.tile__rside{
+				display: block;
+			}
+		}
+		&__git{
+			.tile__lside{
+				display: block;
+			}
+		}
+		&__gulp{
+			.tile__rside{
+				display: block;
+			}
+		}
+		&__js{
+			.tile__bside,
+			.tile__lside{
+				display: block;
+			}
+		}
+		&__node{
+			.tile__bside,
+			.tile__rside{
+				display: block;
+			}
+		}
+	}
+}
