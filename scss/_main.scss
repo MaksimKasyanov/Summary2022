@@ -76,57 +76,64 @@ h2{
 .theme-btn{
 	position: relative;
 	z-index: -2;
-	width: 55px;
-	height: 20px;
+	width: 52px;
+	height: 22px;
 	background-color: #545454;
-	border-radius: 10px;
-	box-shadow: inset 0px 4px 7px #302F2F;
+	border-radius: 11px;
+	box-shadow: 0px 0px 2px #fff, inset 0px 0px 2px .5px #000;
 	&__switcher{
 		position: absolute;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) rotate(360deg);
 		top: 50%;
-		left: 8px;
+		left: calc(0% + 11px);
 		display: block;
-		width: 28px;
-		height: 28px;
-		background-image: url('../images/switcher.svg');
+		width: 20px;
+		height: 20px;
 		transition: all 0.5s;
-		
+		// background-image: url('../images/bg-circle-blur.svg');
+		background-color: rgba(255, 255, 255, 0.308);
+		border-radius: 50%;
 		&::before{
 			content: "";
 			position: absolute;
-			transform: translate(-50%, -50%);
-			top: 35%;
-			left: 35%;
-			width: 18px;
-			height: 18px;
+			z-index: -2;
+			transform: translate(-50%, -50%) rotate(100deg);
+			// background-color: #F6E32F;
+			top: 50%;
+			left: 50%;
+			width: 17px;
+			height: 17px;
 			border-radius: 50%;
-			box-shadow: 4px 4px 0 0 #ffffff;
-			transition: all .75s;
+			box-shadow: inset 4px 2px 0 0 transparent;
+			transition: all .5s;
+			background-image: url('../images/sun-switcher.svg');
+			background-position: center center;
+			background-size: 80%;
+			background-repeat: no-repeat;
 		}
-	}
-	&__moon-sun {
-		position: absolute;
-		display: block;
-		
 	}
 	&__active{
 		.theme-btn__switcher{
-			left: 45px;
+			left: calc(100% - 11px);
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(360deg);
 			&::before{
-				content: "";
 				position: absolute;
-				transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%) rotate(300deg);
+				background-color: transparent;
 				top: 50%;
-				left: 50%;
-				width: 18px; 
-				height: 18px;
-				background-color: rgb(233, 250, 3);
+				right: 0;
+				width: 12px;
+				height: 12px;
 				border-radius: 50%;
-				box-shadow: 0px 0px 5px 2px rgb(233, 250, 3);
+				box-shadow: inset 4px 2px 0 0 #000;
+				transition: all .5s;
+				background-size: 0%;
+				background-position: top left;
 			}
 		}
 	}
+
 }
 .menu{
 	position:fixed;
@@ -139,7 +146,7 @@ h2{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: all 1s;
+	transition: all .5s;
 	transform: translateY(-100vh);
 	&__active{
 		transform: translateY(0vh);
@@ -170,12 +177,7 @@ h2{
 		margin-top: 70px;
 	}
 }
-.form-bot{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+
 .form-close{
 	position: absolute;
 	left: 24px;
@@ -233,9 +235,9 @@ h2{
 		font-size: 15px;
 		line-height: 20px;
 		font-family: 'M1 PLUS 1';
-		width: 330px;
+		width: 250px;
 		margin: 0 auto;
-		margin-bottom: 100px;
+		margin-bottom: 35px;
 	}
 	&__name,
 	&__address,
@@ -243,11 +245,11 @@ h2{
 		display: block;
 		width: 100%;
 		max-width: 330px;
-		height: 40px;
+		height: 45px;
 		min-height: 40px;
 		border: 2px solid #21DB7E;
 		padding-left: 20px;
-		margin-bottom: 22px;
+		margin-bottom: 20px;
 		caret-color: #fff;
 		color: #fff;
 		font-size: 14px;
@@ -271,8 +273,8 @@ h2{
 
 	}
 	&__list-item{
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 	}
 	&__list-btn{
 		display: block;
@@ -283,10 +285,7 @@ h2{
 		margin: 0;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: 55%;
-	}
-	&__list-btn--linkedin{
-		background-image: url('../images/linkedin.svg');
+		background-size: 75%;
 	}
 	&__list-btn--telegram{
 		background-image: url('../images/telegram.svg');
@@ -306,9 +305,6 @@ h2{
 	&__list-btn--viber,
 	&__list-btn--whatsapp{
 		background-image: url('../images/viber.svg');
-	}
-	&__address{
-		margin-bottom: 10px;
 	}
 	&__descr{
 		max-width: 330px;
