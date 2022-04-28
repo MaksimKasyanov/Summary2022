@@ -218,15 +218,6 @@ h2{
 		font-size: 32px;
 	}
 	&__list-link--resume{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 170px;
-		height: 50px;
-		color: #fff;
-		font-size: 16px;
-		border: 2px solid #21DB7E;
-		box-shadow: 0px 0px 15px #21DB7E;
 		margin-top: 70px;
 	}
 }
@@ -440,6 +431,12 @@ h2{
 		background-color: #181818;
 	}
 }
+.slider{
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	width: 280px;
+}
 .portfolio{
 	position: relative;
 	&__bullets{
@@ -468,31 +465,43 @@ h2{
 		box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.438);
 		background-color: #ffffff;
 	}
+	&__slider{
+		height: 400px;
+		width: 230px;
+		border: 1px solid #fff;
+	}
 	&__slide{
 		width: 230px;
 		height: 400px;
 		background-size: cover;
 	}
+
+}
+
+.case-one,
+.case-two,
+.case-three{
+	width: 100%;
+	height: 100%;
+	&__wrapper{
+	}
 	&__slide-1{
-		background-image: url('../images/woldie.jpg');
 	}
 	&__slide-2{
-		background-image: url('../images/bicycles.jpg');
+		height: 408px;
+		width: 100%;
+		background-color: #181818;
+		// padding: 15px;
 	}
-	&__slide-3{
-		background-image: url('../images/kushop.jpg');
+	&__slide-2--text{
+		font-family: 'M PLUS 1p', sans-serif;
+		width: 200px;
+		margin: 15px auto 0;
+		background-color: #fff;
 	}
-}
-.slider{
-	position: relative;
-	margin: 0 auto;
-	display: flex;
-	width: 280px;
-}
-.swiper {
-	height: 400px;
-	width: 230px;
-	border: 1px solid #fff;
+	&__slide-2--button{
+		margin: 0 auto;
+	}
 }
 .skills{
 	position: relative;

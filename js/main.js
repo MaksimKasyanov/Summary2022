@@ -69,3 +69,23 @@ const swiper = new Swiper('.portfolio__slider', {
 	},
 });
 
+const swiperCaseOne = new Swiper('.case-one__slider', {
+	// loop: true,
+	effect: 'fade',
+	spaceBetween: 30,
+
+});
+
+const swiperCaseTwo = new Swiper('.case-two__slider', {
+	// loop: true,
+	effect: 'fade',
+	spaceBetween: 30,
+
+});
+
+const swiperCaseThree = new Swiper('.case-three__slider', {
+	// loop: true,
+	effect: 'fade',
+	spaceBetween: 30,
+
+});
