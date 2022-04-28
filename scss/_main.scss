@@ -4,7 +4,6 @@ html{
 		display: none;
 	}
 }
-
 body{
 	font-family: 'Russo One', sans-serif;
 	transition: all 0.75s;
@@ -73,9 +72,63 @@ h2{
 		}
 	}
 }
-.theme-btn{
+.header-buttons{
 	position: relative;
-	z-index: -2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90px;
+	height: 122px;
+}
+.lang-btn{
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	background-color: #545454;
+	box-shadow: 0px 0px 2px #fff, inset 0px 0px 2px .5px #000;
+	border-radius: 50%;
+	.lang-btn__eng{
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		color: #fff;
+		font-size: 10px;
+		opacity: 1;
+		transition: all .75s;
+		padding: 10px;
+		display: block;
+	}
+	.lang-btn__ru{
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		color: #fff;
+		font-size: 0;
+		transition: all .75s;
+	}
+}
+.lang-btn_active{
+	.lang-btn__eng{
+		opacity: 0;
+		font-size: 0;
+	}
+	.lang-btn__ru{
+		font-size: 10px;
+		opacity: 1;
+		
+	}
+}
+.theme-btn{
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 0;
 	width: 52px;
 	height: 22px;
 	background-color: #545454;
@@ -177,7 +230,6 @@ h2{
 		margin-top: 70px;
 	}
 }
-
 .form-close{
 	position: absolute;
 	left: 24px;
@@ -199,7 +251,6 @@ h2{
 		transform: rotate(-45deg);
 	}
 }
-
 .form{
 	position: fixed;
 	z-index: 9;
@@ -215,7 +266,7 @@ h2{
 	flex-direction: column;
 	align-items: center;
 	transform: translateY(-100vh);
-	transition: all 0.5s;
+	transition: all 0.75s;
 	&__customer{
 		&_active{
 			transform: translateY(0vh);
@@ -375,7 +426,7 @@ h2{
 	
 	&__button {
 		
-		width: 100%;
+		width: 170px;
 		height: 50px;
 		border: 2px solid #21DB7E;
 		font-size: 16px;
@@ -388,77 +439,7 @@ h2{
 		z-index: 1;
 		background-color: #181818;
 	}
-	&__item {
-		position: absolute;
-		z-index: -1;
-		top: 0px;
-		width: 40px;
-		height: 40px;
-		border: 1px solid #21DB7E;
-		transform:  rotateX(-180deg);
-		box-shadow: 0px 0px 6px 2px rgba(33, 219, 126, 0.25);
-		&::before{
-			content: '';
-			position: absolute;
-			transform: translateX(-50%);
-			top: -0px;
-			height: 0px;
-			left: 50%;
-			width: 1px;
-			background-color: #21DB7E;
-			transition: all 0.75s;
-		}
-	}
-	&__item-1{
-		left: 0px;
-		transition: all 0.75s;
-	}
-	&__item-2{
-		left: calc(50% - 20px);
-		transition: all 1s;
-		&::before{
-			transition: all 1s;
-		}
-	}
-	&__item-3{
-		right: 0px;
-		transition: all 1.25s;
-		&::before{
-			transition: all 1.25s;
-		}
-	}
-	// &__item_active {
-	// 	top: 58px;
-	// 	transform:  rotateX(0deg);
-	// 	&::before{
-	// 		top: -10px;
-	// 		height: 10px;
-	// 	}
-	// }
-	&__link {
-		position: relative;
-		z-index: 2;
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-position: center center;
-		cursor: pointer;
-	}
-	&__link1{
-		background-image: url('../images/phone.svg');
-		background-size: 30%;
-	}
-	&__link2{
-		background-image: url('../images/telegram.svg');
-		background-size: 50%;
-	}
-	&__link3{
-		background-image: url('../images/email.svg');
-		background-size: 50%;
-	}
 }
-
 .portfolio{
 	position: relative;
 	&__bullets{
@@ -511,10 +492,8 @@ h2{
 .swiper {
 	height: 400px;
 	width: 230px;
+	border: 1px solid #fff;
 }
-
-
-
 .skills{
 	position: relative;
 	z-index: 1;
@@ -783,13 +762,7 @@ h2{
 		}
 	}
 }
-
-
 .feedback {
-
-	&__title {
-	}
-
 	&__descr {
 		width: 286px;
 		margin: 0 auto;
@@ -798,14 +771,12 @@ h2{
 		text-align: center;
 		font-family: 'M PLUS 1p', sans-serif;
 	}
-
 	&__buttons {
 		position: relative;
 		margin: 0 auto;
 		height: 220px;
 		width: 290px;
 	}
-
 	&__btn {
 		position: absolute;
 		top: 50%;
@@ -819,7 +790,6 @@ h2{
 		transition: all 0.5s;
 		background-color: #181818;
 	}
-
 	&__form {
 		left: 0%;
 	}
@@ -890,7 +860,6 @@ h2{
 	&__contacts-line3{
 		top: calc(100% - 2px);
 	}
-
 	&__mark {
 		right: 0%;
 	}

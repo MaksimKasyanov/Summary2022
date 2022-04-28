@@ -23,18 +23,17 @@
 		</button>
 		<nav class="menu">
 			<ul class="menu__list">
-
 				<li class="menu__list-item">
-					<a class="menu__list-link" target="_blank" href="https://github.com/MaksimKasyanov">Github</a>
-				</li>
-				<li class="menu__list-item">
-					<button class="menu__list-link">Contacts</button>
+					<a class="menu__list-link menu__list-employer" href="#">Employers</a>
 				</li>
 				<li class="menu__list-item">
 					<button class="menu__list-link menu__list-customer">Customers</button>
 				</li>
 				<li class="menu__list-item">
-					<a class="menu__list-link menu__list-employer" href="#">Employers</a>
+					<button class="menu__list-link">Contacts</button>
+				</li>
+				<li class="menu__list-item">
+					<a class="menu__list-link" target="_blank" href="https://github.com/MaksimKasyanov">Github</a>
 				</li>
 				<li class="menu__list-item">
 					<a class="menu__list-link--resume" target="_blank" href="#">Resume</a>
@@ -80,30 +79,29 @@
 			<textarea class="form__text" placeholder="Type here..."></textarea>
 			<button class="form__submit">Submit</button>
 		</form>
-		<button class="theme-btn">
-			<span class="theme-btn__switcher">
-			</span>
-		</button>
+		<ul class="header-buttons">
+			<li class="header-buttons__item">
+				<button class="lang-btn">
+					<span class="lang-btn__eng">EN</span>
+					<span class="lang-btn__ru">RU</span>
+				</button>
+			</li>
+			<li class="header-buttons__item">
+				<button class="theme-btn">
+					<span class="theme-btn__switcher">
+					</span>
+				</button>
+			</li>
+		</ul>
+
+
 	</header>
 	<main class="main">
 		<section class="intro">
 			<p class="intro__text">Hi, my name is</p>
 			<p class="intro__name">Maksim Kasyanov</p>
 			<p class="intro__descr">I’m a front-end developer specializing in creating accessible valid responsive websites. Currently, I’m focused on learning JavaScript.</p>
-			<ul class="intro-btn">
-				<li class="intro-btn__item-button">
-					<button class="intro-btn__button">Contact me!</button>
-				</li>
-				<li class="intro-btn__item intro-btn__item-1">
-					<a class="intro-btn__link intro-btn__link1" href="tel:+380973710447"></a>
-				</li>
-				<li class="intro-btn__item intro-btn__item-2">
-					<a class="intro-btn__link intro-btn__link2" href="https://telegram.me/maksim_kasyanov"></a>
-				</li>
-				<li class="intro-btn__item intro-btn__item-3">
-					<a class="intro-btn__link intro-btn__link3" href="mailto:maksim.kasyanov.1995@gmail.com"></a>
-				</li>
-			</ul>
+			<button class="intro-btn__button">Contact me!</button>
 		</section>
 
 		<section class="portfolio">
@@ -111,9 +109,15 @@
 			<div class="slider">
 				<div class="portfolio__slider swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide portfolio__slide portfolio__slide-1"></div>
-						<div class="swiper-slide portfolio__slide portfolio__slide-2"></div>
-						<div class="swiper-slide portfolio__slide portfolio__slide-3"></div>
+						<div class="swiper-slide portfolio__slide portfolio__slide-1">
+							
+						</div>
+						<div class="swiper-slide portfolio__slide portfolio__slide-2">
+
+						</div>
+						<div class="swiper-slide portfolio__slide portfolio__slide-3">
+
+						</div>
 					</div>
 				</div>
 			<div class="portfolio__bullets"></div>
@@ -223,6 +227,7 @@
 	</footer>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
+	
 </body>
 
 </html>
