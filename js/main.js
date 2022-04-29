@@ -66,6 +66,28 @@ const swiperCaseOne = new Swiper('.case-one__slider', {
 	// loop: true,
 	effect: 'flip',
 	spaceBetween: 30,
+	on: {
+		beforeInit: swiper => {
+			if (!window.checkInit) {
+				const slideArr = swiper.$wrapperEl.children()
+				const [faceSlide, backSlide] = slideArr
+				console.log(faceSlide, backSlide)
+				
+				faceSlide.addEventListener('click', e => {
+					faceSlide.style.transition = "all .5s ease"
+					e.stopImmediatePropagation()
+					swiper.slideNext()
+				})
+				backSlide.addEventListener('click', e =>{
+					backSlide.style.transition = "all .5s ease"
+					e.stopImmediatePropagation()
+					swiper.slidePrev()
+				})
+			}
+			window.checkInit = true
+		},
+	},
+	
 });
 
 const swiperCaseTwo = new Swiper('.case-two__slider', {
