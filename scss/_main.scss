@@ -28,50 +28,7 @@ h2{
 	justify-content: space-between;
 	padding: 0 20px;
 }
-.burger{
-	position: relative;
-	z-index: 5;
-	width: 30px;
-	height: 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	&__line{
-		position: absolute;
-		width: 30px;
-		height: 1px;
-		opacity: 1;
-		transition: all 1s;
-	}
-	&__line1{
-		width: 20px;
-		top: 5px;
-	}
-	&__line2{
-		transition: all .5s;
-		top: 15px;
-	}
-	&__line3{
-		top: 25px;
-	}
-	&__cross{
-		height: 30px;
-		position: relative;
-		.burger__line1{
-			top: 15px;
-			width: 30px;
-			transform: rotate(45deg);
-		}
-		.burger__line2{
-			opacity: 0;
-		}
-		.burger__line3{
-			top: 15px;
-			width: 30px;
-			transform: rotate(-45deg);
-		}
-	}
-}
+
 .header-buttons{
 	position: relative;
 	display: flex;
@@ -80,114 +37,7 @@ h2{
 	width: 90px;
 	height: 122px;
 }
-.lang-btn{
-	position: absolute;
-	transform: translateY(-50%);
-	top: 50%;
-	left: 0;
-	width: 22px;
-	height: 22px;
-	background-color: #545454;
-	box-shadow: 0px 0px 2px #fff, inset 0px 0px 2px .5px #000;
-	border-radius: 50%;
-	.lang-btn__eng{
-		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
-		color: #fff;
-		font-size: 10px;
-		opacity: 1;
-		transition: all .75s;
-		padding: 10px;
-		display: block;
-	}
-	.lang-btn__ru{
-		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
-		opacity: 0;
-		color: #fff;
-		font-size: 0;
-		transition: all .75s;
-	}
-}
-.lang-btn_active{
-	.lang-btn__eng{
-		opacity: 0;
-		font-size: 0;
-	}
-	.lang-btn__ru{
-		font-size: 10px;
-		opacity: 1;
-		
-	}
-}
-.theme-btn{
-	position: absolute;
-	transform: translateY(-50%);
-	top: 50%;
-	right: 0;
-	width: 52px;
-	height: 22px;
-	background-color: #545454;
-	border-radius: 11px;
-	box-shadow: 0px 0px 2px #fff, inset 0px 0px 2px .5px #000;
-	&__switcher{
-		position: absolute;
-		transform: translate(-50%, -50%) rotate(360deg);
-		top: 50%;
-		left: calc(0% + 11px);
-		display: block;
-		width: 20px;
-		height: 20px;
-		transition: all 0.5s;
-		// background-image: url('../images/bg-circle-blur.svg');
-		background-color: rgba(255, 255, 255, 0.308);
-		border-radius: 50%;
-		&::before{
-			content: "";
-			position: absolute;
-			z-index: -2;
-			transform: translate(-50%, -50%) rotate(100deg);
-			// background-color: #F6E32F;
-			top: 50%;
-			left: 50%;
-			width: 17px;
-			height: 17px;
-			border-radius: 50%;
-			box-shadow: inset 4px 2px 0 0 transparent;
-			transition: all .5s;
-			background-image: url('../images/sun-switcher.svg');
-			background-position: center center;
-			background-size: 80%;
-			background-repeat: no-repeat;
-		}
-	}
-	&__active{
-		.theme-btn__switcher{
-			left: calc(100% - 11px);
-			top: 50%;
-			transform: translate(-50%, -50%) rotate(360deg);
-			&::before{
-				position: absolute;
-				transform: translate(-50%, -50%) rotate(300deg);
-				background-color: transparent;
-				top: 50%;
-				right: 0;
-				width: 12px;
-				height: 12px;
-				border-radius: 50%;
-				box-shadow: inset 4px 2px 0 0 #000;
-				transition: all .5s;
-				background-size: 0%;
-				background-position: top left;
-			}
-		}
-	}
 
-}
 .menu{
 	position:fixed;
 	top: 0;
@@ -221,27 +71,7 @@ h2{
 		margin-top: 70px;
 	}
 }
-.form-close{
-	position: absolute;
-	left: 24px;
-	top: 24px;
-	width: 30px;
-	height: 30px;
-	&::before,
-	&::after{
-		content: '';
-		position: absolute;
-		width: 30px;
-		height: 1px;
-		top: 50%;
-		left: 0;
-		transform: rotate(45deg);
-		background-color: #fff;
-	}
-	&::after{
-		transform: rotate(-45deg);
-	}
-}
+
 .form{
 	position: fixed;
 	z-index: 9;
@@ -404,17 +234,6 @@ h2{
 	z-index: 1;
 	width: 170px;
 	height: 100px;
-	&:hover{
-		.intro-btn__item {
-			top: 58px;
-			transform:  rotateX(0deg);
-			&::before{
-				top: -10px;
-				height: 10px;
-			}
-		}
-	}
-	
 	&__button {
 		
 		width: 170px;
@@ -424,11 +243,6 @@ h2{
 		color: #fff;
 		border: 2px solid #21DB7E;
 		box-shadow: 0px 0px 15px #21DB7E;
-	}
-	&__item-button{
-		position: relative;
-		z-index: 1;
-		background-color: #181818;
 	}
 }
 .slider{
@@ -511,6 +325,16 @@ h2{
 	overflow: hidden;
 	background-image: url('../images/portfolio-bg.svg');
 	background-size: cover;
+	&__inner{
+		margin: 0 auto;
+		width: 100%;
+		height: 500px;
+		max-width: 720px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
 	&__title{
 		height: 25%;
 		display: flex;
@@ -518,259 +342,7 @@ h2{
 		justify-content: center;
 	}
 }
-.tile {
-	position: relative;
-	width: calc(50vw - 35px);
-	max-width: 220px;
-	max-height: 220px;
-	height: calc(50vw - 35px);
-	margin-bottom: 25px;
-	box-shadow: inset 0px 0px 15px 5px #101010;
-	transition: all 0.5s;
-	
 
-	&__wrapper{
-		margin: 0 auto;
-		width: 100%;
-		max-width: 720px;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-bottom: 30px;
-
-	}
-	&__border{
-		width: 100%;
-		height: 100%;
-		position: relative;
-		overflow: hidden;
-	}
-	&__text{
-		position: absolute;
-		z-index: 1;
-		width: 100%;
-		transition: all 0.8s;
-		padding: 20px 0px 0 20px;
-		user-select: none;
-	}
-	&__text-html{
-
-	}
-	&__img {
-		position: relative;
-		background-color: #181818;
-		box-shadow: inset 0px 0px 15px 5px #101010;
-		z-index: 2;
-		width: 100%;
-		height: 100%;
-		background-size: 50%;
-		background-position: center center;
-		background-repeat: no-repeat;
-		transition: all 0.8s;
-	}
-	&__side {
-		position: absolute;
-		z-index: 3;
-		background-color: #21DB7E;
-		width: calc(100% + 5px);
-		height: 5px;
-		transition: all 0.8s;
-		box-shadow: 0px 0px 0px 0px #21DB7E;
-	}
-
-	&__tside {
-		top: 0;
-	}
-
-	&__rside {
-		top: 0;
-		right: -5px;
-		height: calc(100% + 5px);
-		width: 5px;
-		left: 100%;
-	}
-
-	&__bside {
-		bottom: -5px;
-		left: 0;
-	}
-
-	&__lside {
-		top: 0;
-		height: calc(100% + 5px);
-		width: 5px;
-		left: -5px;
-	}
-	&:hover{
-		.tile__bside,
-		.tile__rside,
-		.tile__tside,
-		.tile__lside{
-			background-color: #fff;
-			box-shadow: 0px 0px 5px 1px #fff;
-		}
-	}
-	&__html{
-		.tile__tside,
-		.tile__lside{
-			display: none;
-		}
-		.tile__img{
-			left: 0;
-			background-image: url('../images/html.svg');
-		}
-		&:hover{
-			.tile__img{
-				left: -100%;
-			}
-			.tile__bside{
-				width: 100%;
-			}
-			.tile__rside{
-				left: -5px;
-			}
-		}
-	}
-	&__scss{
-		.tile__tside,
-		.tile__rside{
-			display: none;
-		}
-		.tile__img{
-			right: 0;
-			background-image: url('../images/scss.svg');
-		}
-		.tile__bside{
-			left: -5px;
-		}
-		.tile__img{
-			right: 0;
-		}
-		&:hover{
-			.tile__img{
-				right: -100%;
-			}
-			.tile__lside{
-				left: 100%;
-			}
-			.tile__bside{
-				left: 0px;
-				width: 100%;
-			}
-		}
-	}
-	&__git{
-		.tile__lside{
-			display: none;
-		}
-		.tile__rside{
-			height: 100%;
-		}
-		.tile__tside{
-			left: 0;
-		}
-		.tile__img{
-			left: 0;
-			background-image: url('../images/git.svg');
-		}
-		&:hover{
-			.tile__img{
-				left: -100%;
-			}
-			.tile__tside{
-				width: calc(100% + 5px);
-				left: -5px;
-			}
-			.tile__bside{
-				width: calc(100% + 5px);
-				left: -5px;
-			}
-			.tile__rside{
-				left: -5px;
-			}
-		}
-	}
-	&__gulp{
-		.tile__rside{
-			display: none;
-		}
-		.tile__tside{
-			width: 100%;
-		}
-		.tile__bside{
-			width: 100%;
-		}
-		.tile__img{
-			right: 0;
-			background-size: 25%;
-			background-image: url('../images/gulp.svg');
-		}
-		&:hover{
-			.tile__img{
-				right: -100%;
-			}
-			.tile__lside{
-				left: 100%;
-			}
-			.tile__bside{
-				left: 0px;
-				width: 100%;
-			}
-		}
-	}
-	&__js{
-		.tile__bside,
-		.tile__lside{
-			display: none;
-		}
-		.tile__rside{
-			height: 100%;
-		}
-		.tile__img{
-			left: 0;
-			background-image: url('../images/js.svg');
-		}
-		&:hover{
-			.tile__img{
-				left: -100%;
-			}
-			.tile__tside{
-				width: 100%;
-			}
-			.tile__rside{
-				left: -5px;
-			}
-		}
-	}
-	&__node{
-		.tile__bside,
-		.tile__rside{
-			display: none;
-		}
-		.tile__lside{
-			height: 100%;
-		}
-		.tile__tside{
-			width: 100%;
-		}
-		.tile__img{
-			right: 0;
-			background-image: url('../images/node.svg');
-		}
-		&:hover{
-			.tile__img{
-				right: -100%;
-			}
-			.tile__lside{
-				left: 100%;
-			}
-			.tile__bside{
-				left: 0px;
-				width: 100%;
-			}
-		}
-	}
-}
 .feedback {
 	&__descr {
 		width: 286px;
