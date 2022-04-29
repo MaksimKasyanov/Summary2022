@@ -5,7 +5,7 @@ html {
 *,
 *::after,
 *::before {
-   box-sizing: inherit;
+   box-sizing: border-box;
 }
 
 ul[class],
@@ -38,26 +38,11 @@ ul[class] {
    list-style: none;
 }
 
-img {
-   max-width: 100%;
-   display: block;
-}
+
 
 input,
 button,
 textarea,
 select {
    font: inherit;
-	outline: none;
-	border: none;
-	cursor: pointer;
-	background: none;
-	padding: 0;
-}
-
-a,
-li {
-	color: #000;
-	text-decoration: none;
-	list-style: none;
 }

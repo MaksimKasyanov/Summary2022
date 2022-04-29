@@ -1,269 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Web-developer</title>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-	rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<title>Memory Cards</title>
+	<link rel="icon" href="images/w.png">
 	<link rel="stylesheet" href="css/style.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body class="theme theme__dark">
-	<header class="header">
-		<button class="burger">
-			<span class="burger__line burger__line1"></span>
-			<span class="burger__line burger__line2"></span>
-			<span class="burger__line burger__line3"></span>
-		</button>
-		<nav class="menu">
-			<ul class="menu__list">
-				<li class="menu__list-item">
-					<a class="menu__list-link menu__list-employer" href="#">Employers</a>
-				</li>
-				<li class="menu__list-item">
-					<button class="menu__list-link menu__list-customer">Customers</button>
-				</li>
-				<li class="menu__list-item">
-					<button class="menu__list-link">Contacts</button>
-				</li>
-				<li class="menu__list-item">
-					<a class="menu__list-link" target="_blank" href="https://github.com/MaksimKasyanov">Github</a>
-				</li>
-				<li class="menu__list-item">
-					<a class="menu__list-link--resume button" target="_blank" href="#">Resume</a>
-				</li>
-			</ul>
-			
-		</nav>
-		<form class="form form__customer" action="#">
-			<button class="form-close form-close__customer"></button>
-				<h3 class="form__title">Please fill the form</h3>
-				<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
-				<input class="form__name" type="text" placeholder="Name">
-				<input class="form__address" type="text" placeholder="Please choose an app">
-				<ul class="form__list">
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--telegram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--facebook"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--twitter"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--instagram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--viber"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--email"></button>
-					</li>
-				</ul>
-				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
-				<button class="form__submit">Submit</button>
-		</form>
-		<form class="form form__employer" action="#">
-			<button class="form-close form-close__employer"></button>
-			<h3 class="form__title">Please fill the form</h3>
-			<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out the form</h4>
-			<input class="form__name" type="text" placeholder="Name">
-			<input class="form__phone" type="number" placeholder="Phone number">
-			<textarea class="form__text" placeholder="Type here..."></textarea>
-			<button class="form__submit">Submit</button>
-		</form>
-		<ul class="header-buttons">
-			<li class="header-buttons__item">
-				<button class="lang-btn">
-					<span class="lang-btn__eng">EN</span>
-					<span class="lang-btn__ru">RU</span>
-				</button>
-			</li>
-			<li class="header-buttons__item">
-				<button class="theme-btn">
-					<span class="theme-btn__switcher">
-					</span>
-				</button>
-			</li>
-		</ul>
+<body>
 
-
-	</header>
-	<main class="main">
-		<section class="intro">
-			<p class="intro__text">Hi, my name is</p>
-			<p class="intro__name">Maksim Kasyanov</p>
-			<p class="intro__descr">I’m a front-end developer specializing in creating accessible valid responsive websites. Currently, I’m focused on learning JavaScript.</p>
-			<button class="intro-btn__button">Contact me!</button>
-		</section>
-
-		<section class="portfolio">
-			<h2 class="portfolio__title">Portfolio</h2>
-			<div class="slider">
-				<div class="portfolio__slider swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide portfolio__slide portfolio__slide-1">
-							<div class="case-one__slider swiper">
-								<div class="swiper-wrapper case-one__wrapper">
-									<div class="swiper-slide case-one__slide case-one__slide-1">
-										<img src="images/woldie.jpg" alt="">
-									</div>
-									<div class="swiper-slide case-one__slide case-one__slide-2">
-										<p class="case-one__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-one__slide-2--button button">View site</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide portfolio__slide portfolio__slide-2">
-							<div class="case-two__slider swiper">
-								<div class="swiper-wrapper case-two__wrapper">
-									<div class="swiper-slide case-two__slide case-two__slide-1">
-										<img src="images/kushop.jpg" alt="">
-									</div>
-									<div class="swiper-slide case-two__slide case-two__slide-2">
-										<p class="case-two__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-two__slide-2--button button">View site</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide portfolio__slide portfolio__slide-3">
-							<div class="case-three__slider swiper">
-								<div class="swiper-wrapper case-three__wrapper">
-									<div class="swiper-slide case-three__slide case-three__slide-1">
-										<img src="images/bicycles.jpg" alt="">
-									</div>
-									<div class="swiper-slide case-three__slide case-three__slide-2">
-										<p class="case-three__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-three__slide-2--button button">View site</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			<div class="portfolio__bullets"></div>
-		</div>
-
-
-
-
-
-		</section>
-
-		<section class="skills">
-			<h2 class="skills__title">Skills</h2>
-			<div class="tile__wrapper">
-				<div class="tile tile__html">
-					<div class="tile__border">
-						<div class="tile__text tile__text-html">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
-				<div class="tile tile__scss">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
-				<div class="tile tile__git">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img tile__img-git"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
-				<div class="tile tile__gulp">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
-				<div class="tile tile__js">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
-				<div class="tile tile__node">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
-					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div>
+	<div class="wrapper">
+		<section class="memory">
+			<div class="memory__card" data-framework="angular">
+				<img class="memory__card-front" src="images/angular.svg" alt="Angular">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card" data-framework="angular">
+				<img class="memory__card-front" src="images/angular.svg" alt="Angular">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card" data-framework="aurelia">
+				<img class="memory__card-front" src="images/aurelia.svg" alt="Aurelia">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="aurelia">
+				<img class="memory__card-front" src="images/aurelia.svg" alt="Aurelia">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="backbone">
+				<img class="memory__card-front" src="images/backbone.svg" alt="Backbone">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="backbone">
+				<img class="memory__card-front" src="images/backbone.svg" alt="Backbone">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="ember">
+				<img class="memory__card-front" src="images/ember.svg" alt="Ember">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="ember">
+				<img class="memory__card-front" src="images/ember.svg" alt="Ember">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="react">
+				<img class="memory__card-front" src="images/react.svg" alt="React">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="react">
+				<img class="memory__card-front" src="images/react.svg" alt="React">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="vue">
+				<img class="memory__card-front" src="images/vue.svg" alt="Vue">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
+			</div>
+			<div class="memory__card"data-framework="vue">
+				<img class="memory__card-front" src="images/vue.svg" alt="Vue">
+				<img class="memory__card-back" src="images/js-badge.svg" alt="JS-badge">
 			</div>
 		</section>
-
-		<section class="feedback">
-			<h2 class="feedback__title">Let's be In Touch</h2>
-			<p class="feedback__descr">I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
-			<div class="feedback__buttons">
-				<button class="feedback__btn feedback__form">Fill <br> the <br> form</button>
-
-				<div class="feedback__contacts">
-					<button class="feedback__btn feedback__btn-contacts">Get my <br> contacts</button>
-					<!-- <div class="feedback__contacts-line feedback__contacts-line1 feedback__contacts-lline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div>
-					<div class="feedback__contacts-line feedback__contacts-line2 feedback__contacts-lline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div>
-					<div class="feedback__contacts-line feedback__contacts-line3 feedback__contacts-lline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div>
-					<div class="feedback__contacts-line feedback__contacts-line1 feedback__contacts-rline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div>
-					<div class="feedback__contacts-line feedback__contacts-line2 feedback__contacts-rline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div>
-					<div class="feedback__contacts-line feedback__contacts-line3 feedback__contacts-rline">
-						<a class="feedback__contacts-link" href=""></a>
-					</div> -->
-				</div>
-				<button class="feedback__btn feedback__mark">Leave <br> your <br> mark</button>
-			</div>
-		</section>
-
-	</main>
-	<footer class="footer">
-		<span class="footer__copyrights">©Kasyanov Maksim 2022</span>
-	</footer>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="js/main.js"></script>
-	
+	</div>
+	<script src="js/main.js" async></script>
 </body>
 
 </html>
