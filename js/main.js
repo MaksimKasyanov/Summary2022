@@ -63,42 +63,41 @@ const swiper = new Swiper('.portfolio__slider', {
 	},
 });
 const swiperCaseOne = new Swiper('.case-one__slider', {
-	// loop: true,
-	effect: 'flip',
-	spaceBetween: 30,
-	on: {
-		beforeInit: swiper => {
-			if (!window.checkInit) {
-				const slideArr = swiper.$wrapperEl.children()
-				const [faceSlide, backSlide] = slideArr
-				console.log(faceSlide, backSlide)
-				
-				faceSlide.addEventListener('click', e => {
-					faceSlide.style.transition = "all .5s ease"
-					e.stopImmediatePropagation()
-					swiper.slideNext()
-				})
-				backSlide.addEventListener('click', e =>{
-					backSlide.style.transition = "all .5s ease"
-					e.stopImmediatePropagation()
-					swiper.slidePrev()
-				})
-			}
-			window.checkInit = true
-		},
-	},
-	
+	effect: 'slide',
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.case-one__next',
+		prevEl: '.case-one__prev',
+	 },
 });
 
 const swiperCaseTwo = new Swiper('.case-two__slider', {
-	// loop: true,
-	effect: 'flip',
-	spaceBetween: 30,
 
+	effect: 'slide',
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.case-two__next',
+		prevEl: '.case-two__prev',
+	 },
 });
 const swiperCaseThree = new Swiper('.case-three__slider', {
-	// loop: true,
-	effect: 'flip',
-	spaceBetween: 30,
 
+	effect: 'slide',
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.case-three__next',
+		prevEl: '.case-three__prev',
+	 },
 });
+
+document.querySelector(".skill__scss").addEventListener("click", skillScss);
+function skillScss() {
+	let skillScss = document.querySelector(".skill__container");
+	skillScss.classList.toggle("skill__scss-wrapper_active");
+}
+document.querySelector(".skill__cwars").addEventListener("click", skillCwars);
+function skillCwars() {
+	let skillCwars = document.querySelector(".skill__container");
+	skillCwars.classList.toggle("skill__container_cwars");
+
+}

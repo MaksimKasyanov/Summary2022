@@ -97,40 +97,50 @@
 
 	</header>
 	<main class="main">
+
 		<section class="intro">
 			<p class="intro__text">Hi, my name is</p>
 			<p class="intro__name">Maksim Kasyanov</p>
 			<p class="intro__descr">I’m a front-end developer specializing in creating accessible valid responsive websites. Currently, I’m focused on learning JavaScript.</p>
-			<button class="intro-btn__button">Contact me!</button>
+			<button class="button intro-btn__button">Contact me!</button>
 		</section>
-
+		
 		<section class="portfolio">
 			<h2 class="portfolio__title">Portfolio</h2>
 			<div class="slider">
 				<div class="portfolio__slider swiper">
-					<div class="swiper-wrapper">
+					<div class="portfolio__slider-wrapper swiper-wrapper">
 						<div class="swiper-slide portfolio__slide portfolio__slide-1">
 							<div class="case-one__slider swiper">
 								<div class="swiper-wrapper case-one__wrapper">
 									<div class="swiper-slide case-one__slide case-one__slide-1">
+										<div class="case-one__next">Info</div>
 										<img src="images/woldie.jpg" alt="">
 									</div>
 									<div class="swiper-slide case-one__slide case-one__slide-2">
-										<p class="case-one__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-one__slide-2--button button">View site</button>
+										<div class="case-one__prev">back</div>
+										<p class="case-one__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
+										<p class="case-one__slide-2--text"></p>
+										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
 									</div>
 								</div>
 							</div>
 						</div>
+
+
+						
 						<div class="swiper-slide portfolio__slide portfolio__slide-2">
 							<div class="case-two__slider swiper">
 								<div class="swiper-wrapper case-two__wrapper">
 									<div class="swiper-slide case-two__slide case-two__slide-1">
 										<img src="images/kushop.jpg" alt="">
+										<div class="case-two__next">Info</div>
 									</div>
 									<div class="swiper-slide case-two__slide case-two__slide-2">
-										<p class="case-two__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-two__slide-2--button button">View site</button>
+										<!-- <div class="case-two__prev">back</div> -->
+										<p class="case-two__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
+										<p class="case-two__slide-2--text"></p>
+										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
 									</div>
 								</div>
 							</div>
@@ -139,11 +149,14 @@
 							<div class="case-three__slider swiper">
 								<div class="swiper-wrapper case-three__wrapper">
 									<div class="swiper-slide case-three__slide case-three__slide-1">
+										<div class="case-three__next">info</div>
 										<img src="images/bicycles.jpg" alt="">
 									</div>
 									<div class="swiper-slide case-three__slide case-three__slide-2">
-										<p class="case-three__slide-2--text">Woldie is my firs landing page</p>
-										<button class="case-three__slide-2--button button">View site</button>
+										<!-- <div class="case-three__prev">back</div> -->
+										<p class="case-three__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
+										<p class="case-three__slide-2--text"></p>
+										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
 									</div>
 								</div>
 							</div>
@@ -160,72 +173,69 @@
 
 		</section>
 
-		<section class="skills">
-			<h2 class="skills__title">Skills</h2>
-			<div class="skills__inner">
-				<div class="tile tile__html">
-					<div class="tile__front">
-						<div class="tile__img"></div>
-						<div class="tile__side tile__tside"></div>
-						<div class="tile__side tile__rside"></div>
-						<div class="tile__side tile__bside"></div>
-						<div class="tile__side tile__lside"></div>
+		<section class="skill__wrapper">
+			<h2 class="skill__title">Skills</h2>
+			<div class="skill__container">
+				<div class="skill skill__scss-wrapper">
+					<div class="skill__scss skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__back">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veritatis vero quos fugit ullam, at corrupti dolores ab labore soluta cum, obcaecati officiis aliquam quo iure? Rem numquam fuga ex?
-					</div>
+				</div>
 
-				</div>
-				<!-- <div class="tile tile__scss">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
+				<div class="skill ">
+					<div class="skill__gulp skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
 				</div>
-				<div class="tile tile__git">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img tile__img-git"></div>
+
+				<div class="skill ">
+					<div class="skill__git skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
 				</div>
-				<div class="tile tile__gulp">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
+
+				<div class="skill">
+					<div class="skill__cwars skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
 				</div>
-				<div class="tile tile__js">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
+
+				<div class="skill ">
+					<div class="skill__js skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
 				</div>
-				<div class="tile tile__node">
-					<div class="tile__border">
-						<div class="tile__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> A dignissimos ea soluta et reiciendis vitae. </div>
-						<div class="tile__img"></div>
+
+				<div class="skill ">
+					<div class="skill__node skill__front">
+						<div class="skill__img"></div>
+						<div class="skill__side skill__tside"></div>
+						<div class="skill__side skill__rside"></div>
+						<div class="skill__side skill__bside"></div>
+						<div class="skill__side skill__lside"></div>
 					</div>
-					<div class="tile__side tile__tside"></div>
-					<div class="tile__side tile__rside"></div>
-					<div class="tile__side tile__bside"></div>
-					<div class="tile__side tile__lside"></div>
-				</div> -->
+				</div>
+
 			</div>
 		</section>
 

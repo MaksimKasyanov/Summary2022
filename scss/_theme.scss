@@ -22,8 +22,11 @@
 		}
 	}
 	&__light{
-		color: #000;
+		color: #181818;
 		background-color: #fff;
+		h2{
+			color: #181818;
+		}
 		.header{
 			box-shadow: 0px 4px 20px rgba(15, 14, 14, 0.9);
 			background-color: #ffffffea;
@@ -42,9 +45,15 @@
 				color: #181818;
 			}
 		}
-		.theme-btn{
+		.theme-btn,
+		.lang-btn{
 			box-shadow: 0px 0px 2px #000, inset 0px 0px 1px .5px #fff;
-	
+		}
+		.button{
+			color: #21DB7E;
+			background-color: #181818;
+			border: 0px solid #21DB7E;
+			box-shadow: 0px 0px 0px #21DB7E;
 		}
 		.intro{
 			&__text{

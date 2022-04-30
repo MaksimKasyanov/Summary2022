@@ -10,12 +10,13 @@ body{
 }
 section{
 	padding: 0 20px;
+	margin-bottom: 100px;
 }
 h2{
 	font-size: 24px;
 	color: #fff;
 	text-align: center;
-	padding: 100px 0 50px;
+	margin-bottom: 50px;
 }
 .header{
 	position: fixed;
@@ -253,6 +254,8 @@ h2{
 }
 .portfolio{
 	position: relative;
+	border-bottom: 1px solid #21DB7E;
+	padding-bottom: 50px;
 	&__bullets{
 		position: absolute;
 		left: calc(100% - 10px) !important;
@@ -300,8 +303,12 @@ h2{
 	&__wrapper{
 	}
 	&__slide-1{
+		position: relative;
+		height: 408px;
 	}
 	&__slide-2{
+		position: relative;
+		
 		height: 408px;
 		width: 100%;
 		background-color: #181818;
@@ -311,38 +318,38 @@ h2{
 		font-family: 'M PLUS 1p', sans-serif;
 		width: 200px;
 		margin: 15px auto 0;
-		background-color: #fff;
+		// text-align: center;
+		margin-bottom: 30px;
 	}
 	&__slide-2--button{
 		margin: 0 auto;
 	}
-}
-.skills{
-	position: relative;
-	z-index: 1;
-	border-bottom: 1px solid #21DB7E;
-	width: 100%;
-	overflow: hidden;
-	background-image: url('../images/portfolio-bg.svg');
-	background-size: cover;
-	&__inner{
-		margin: 0 auto;
-		width: 100%;
-		height: 500px;
-		max-width: 720px;
+	&__prev,
+	&__next{
+		position: absolute;
+		z-index: 1;
+		width: 100px;
+		height: 50px;
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-bottom: 30px;
-	}
-	&__title{
-		height: 25%;
-		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		color: #000;
+		bottom: 0;
+		opacity: 1;
+		transition: all .5s;
+	}
+	&__prev{
+
+	}
+	&__next{
+		right: 0;
 	}
 }
 
+.swiper-button-disabled{
+	opacity: 0;
+}
 .feedback {
 	&__descr {
 		width: 286px;
