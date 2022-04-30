@@ -90,14 +90,38 @@ const swiperCaseThree = new Swiper('.case-three__slider', {
 	 },
 });
 
-document.querySelector(".skill__scss").addEventListener("click", skillScss);
+document.querySelector(".skill__scss-wrapper").addEventListener("click", skillScss);
 function skillScss() {
 	let skillScss = document.querySelector(".skill__container");
-	skillScss.classList.toggle("skill__scss-wrapper_active");
+	skillScss.classList.toggle("skill__container_scss");
 }
+
+document.querySelector(".skill__gulp").addEventListener("click", skillGulp);
+function skillGulp() {
+	let skillGulp = document.querySelector(".skill__container");
+	skillGulp.classList.toggle("skill__container_gulp");
+}
+
+document.querySelector(".skill__git").addEventListener("click", skillGit);
+function skillGit() {
+	let skillGulp = document.querySelector(".skill__container");
+	skillGulp.classList.toggle("skill__container_git");
+}
+
 document.querySelector(".skill__cwars").addEventListener("click", skillCwars);
 function skillCwars() {
 	let skillCwars = document.querySelector(".skill__container");
 	skillCwars.classList.toggle("skill__container_cwars");
+}
 
+document.querySelector(".skill__js").addEventListener("click", skillJs);
+function skillJs() {
+	let skillJs = document.querySelector(".skill__container");
+	skillJs.classList.toggle("skill__container_js");
+}
+
+document.querySelector(".skill__node").addEventListener("click", skillNode);
+function skillNode() {
+	let skillNode = document.querySelector(".skill__container");
+	skillNode.classList.toggle("skill__container_node");
 }
