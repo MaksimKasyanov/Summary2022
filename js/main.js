@@ -90,7 +90,19 @@ const swiperCaseThree = new Swiper('.case-three__slider', {
 	 },
 });
 
-document.querySelector(".skill__scss-wrapper").addEventListener("click", skillScss);
+// function skillRemove(){
+// 	let removeScss = document.querySelector(".skill__container");
+// 	removeScss.classList.remove(
+// 		"skill__container_scss",
+// 		"skill__container_gulp",
+// 		"skill__container_git",
+// 		"skill__container_cwars",
+// 		"skill__container_js",
+// 		"skill__container_node"
+// 	);
+// }
+
+document.querySelector(".skill__scss").addEventListener("click", skillScss);
 function skillScss() {
 	let skillScss = document.querySelector(".skill__container");
 	skillScss.classList.toggle("skill__container_scss");
