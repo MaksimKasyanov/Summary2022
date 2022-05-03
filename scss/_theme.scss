@@ -1,4 +1,5 @@
 .theme{
+	
 	&__dark{
 		color: #fff;
 		background-color: #181818;
@@ -22,8 +23,27 @@
 		}
 	}
 	&__light{
+		body{
+			background-color: #fff;
+		}
 		color: #181818;
 		background-color: #fff;
+		.background {
+			position: absolute;
+			right: 0;
+			background: linear-gradient(112deg, #00ff2a, #ffffff00);
+			background-size: 400% 400%;
+			animation: Gradient 2s ease infinite;
+			position: relative;
+			width: 260px;
+			height: 280px;
+			overflow: hidden;
+			padding:0;
+			margin:0px;
+		}
+		.background-wrapper{
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.411),rgba(18, 18, 18, 1)); 
+		}
 		h2{
 			color: #181818;
 		}

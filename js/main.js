@@ -12,6 +12,8 @@ function themeSwitcer() {
 	let theme = document.querySelector(".theme");
 	theme.classList.toggle("theme__dark");
 	theme.classList.toggle("theme__light");
+	let burger = document.querySelector(".svg-path");
+	burger.classList.toggle("svg-path_active");
 }
 document.querySelector(".feedback__btn-contacts").addEventListener("click", feedbackContacts);
 function feedbackContacts() {
@@ -48,6 +50,11 @@ function switchLang() {
 	switchLangEn.classList.toggle("lang-btn_active");
 }
 
+document.querySelector(".feedback__btn-contacts").addEventListener("click", getContscts);
+function getContscts() {
+	let getContscts = document.querySelector(".feedback__contacts-line");
+	getContscts.classList.toggle("feedback__contacts-line_active");
+}
 
 const swiper = new Swiper('.portfolio__slider', {
 	loop: true,
@@ -90,17 +97,6 @@ const swiperCaseThree = new Swiper('.case-three__slider', {
 	 },
 });
 
-// function skillRemove(){
-// 	let removeScss = document.querySelector(".skill__container");
-// 	removeScss.classList.remove(
-// 		"skill__container_scss",
-// 		"skill__container_gulp",
-// 		"skill__container_git",
-// 		"skill__container_cwars",
-// 		"skill__container_js",
-// 		"skill__container_node"
-// 	);
-// }
 
 document.querySelector(".skill__scss").addEventListener("click", skillScss);
 function skillScss() {
@@ -137,3 +133,4 @@ function skillNode() {
 	let skillNode = document.querySelector(".skill__container");
 	skillNode.classList.toggle("skill__container_node");
 }
+
