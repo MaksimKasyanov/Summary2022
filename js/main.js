@@ -67,18 +67,20 @@ function getContscts() {
 }
 
 const swiper = new Swiper('.portfolio__slider', {
-	loop: true,
+	loop: false,
 	effect: 'fade',
 	spaceBetween: 30,
 	allowTouchMove: false,
 	pagination: {
 		el: '.portfolio__bullets',
 		clickable: true,
+		bulletElement: 'portfolio__bullet',
 		slideClass: 'portfolio__slide',
 		bulletClass: 'portfolio__bullet',
 		bulletActiveClass: 'portfolio__bullet-active',
 	},
 });
+
 const swiperCaseOne = new Swiper('.case-one__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
@@ -167,8 +169,14 @@ function removeFillForm() {
 }
 
 
-document.querySelector(".feedback__mark").addEventListener("click", feedbackForm);
-function feedbackForm() {
-	let switchLangEn = document.querySelector(".mark-popup");
-	switchLangEn.classList.remove("mark-popup_active");
+document.querySelector(".feedback__mark").addEventListener("click", feedbackMark);
+function feedbackMark() {
+	let feedbackMark = document.querySelector(".mark-popup");
+	feedbackMark.classList.add("mark-popup_active");
+}
+
+document.querySelector(".form-close__mark").addEventListener("click", removeMarkForm);
+function removeMarkForm() {
+	let feedbackMark = document.querySelector(".mark-popup");
+	feedbackMark.classList.remove("mark-popup_active");
 }

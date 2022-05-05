@@ -305,43 +305,59 @@ h2{
 }
 .slider{
 	position: relative;
-	margin: 0 auto;
-	display: flex;
-	width: 280px;
+	margin: 0 auto 30px;
+	// display: flex;
+	width: 230px;
+	height: 400px;
 }
 .portfolio{
 	position: relative;
 	border-bottom: 1px solid #21DB7E;
 	padding-bottom: 50px;
 	&__bullets{
+		position: static !important;
+		width: 150px !important;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+	}
+	&__navigation{
 		position: absolute;
-		left: calc(100% - 10px) !important;
+		right: -25px;
 		top: 50%;
 		transform: translateY(-50%);
-		width: 50px !important;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color: #181818;
+		z-index: 2;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		box-shadow: 0px 0px 5px #fff;
+		// display: none;
 	}
 	&__bullet{
 		display: block;
-		margin-bottom: 30px;
 		width: 14px;
 		height: 14px;
 		border-radius: 50%;
 		background-color: #fff;
 		transition: all 0.5s;
-		cursor: pointer;
-		
+
 	}
 	&__bullet-active{
 		box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.438);
 		background-color: #ffffff;
+		// .portfolio__navigation{
+		// 	display: block;
+		// }
 	}
+	
+
 	&__slider{
 		height: 400px;
 		width: 230px;
+		box-shadow: 0px 0px 5px #fff;
 		border: 1px solid #fff;
 	}
 	&__slide{
@@ -360,6 +376,7 @@ h2{
 	&__wrapper{
 	}
 	&__slide-1{
+		border-right: 1px solid #fff;
 		position: relative;
 		height: 408px;
 	}
@@ -384,9 +401,11 @@ h2{
 	&__prev,
 	&__next{
 		position: absolute;
-		z-index: 1;
+		// transform: translateY(-50%);
+		top: calc(50% - 50px);
+		z-index: 9;
 		width: 100px;
-		height: 50px;
+		height: 100px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -395,18 +414,35 @@ h2{
 		bottom: 0;
 		opacity: 1;
 		transition: all .5s;
+		border-radius: 50%;
+		border: 1px solid #181818;
 	}
 	&__prev{
-
+		left: -51px;
+		background-image: url('../images/arrowscycle.svg');
+		background-repeat: no-repeat;
+		background-size: 90%;
+		background-position: center center;
+		
+		transition: all 1s;
 	}
 	&__next{
-		right: 0;
+		right: -51px;
 	}
 }
-
-.swiper-button-disabled{
-	opacity: 0;
+.case-rotate{
+	animation: rotate-center 3s linear infinite both;
+	// transform: rotate(360deg);
 }
+@keyframes case-rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+ }
+
 .feedback {
 	&__descr {
 		width: 286px;
@@ -535,7 +571,7 @@ h2{
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	transform: translateX(100vw);
+	transform: translateX(110vw);
 	transition: all .5s;
 	background-color: #181818;
 	z-index: 9;
