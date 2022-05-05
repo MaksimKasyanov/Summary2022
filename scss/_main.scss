@@ -315,7 +315,7 @@ h2{
 	border-bottom: 1px solid #21DB7E;
 	padding-bottom: 50px;
 	&__bullets{
-		position: static !important;
+		position: static;
 		width: 150px !important;
 		display: flex;
 		justify-content: space-between;
@@ -418,31 +418,36 @@ h2{
 		border: 1px solid #181818;
 	}
 	&__prev{
+		position: absolute;
 		left: -51px;
-		background-image: url('../images/arrowscycle.svg');
+		// background-image: url('../images/arrowscycle.svg');
 		background-repeat: no-repeat;
 		background-size: 90%;
 		background-position: center center;
 		
-		transition: all 1s;
 	}
 	&__next{
 		right: -51px;
 	}
 }
+
 .case-rotate{
-	animation: rotate-center 3s linear infinite both;
-	// transform: rotate(360deg);
+	width: 90%;
+	position: absolute;
+	animation: case-rotate 3s linear infinite both;
 }
 @keyframes case-rotate {
 	0% {
 	  transform: rotate(0);
 	}
+	50%{
+		
+		transform: rotate(180deg);
+	}
 	100% {
 	  transform: rotate(360deg);
 	}
  }
-
 .feedback {
 	&__descr {
 		width: 286px;
