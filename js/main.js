@@ -52,8 +52,18 @@ function switchLang() {
 
 document.querySelector(".feedback__btn-contacts").addEventListener("click", getContscts);
 function getContscts() {
-	let getContscts = document.querySelector(".feedback__contacts-line");
-	getContscts.classList.toggle("feedback__contacts-line_active");
+	let getContscts1 = document.querySelector(".feedback__contacts-line1");
+	getContscts1.classList.toggle("feedback__contacts-line_active");
+	let getContscts2 = document.querySelector(".feedback__contacts-line2");
+	getContscts2.classList.toggle("feedback__contacts-line_active");
+	let getContscts3 = document.querySelector(".feedback__contacts-line3");
+	getContscts3.classList.toggle("feedback__contacts-line_active");
+	let getContscts4 = document.querySelector(".feedback__contacts-line4");
+	getContscts4.classList.toggle("feedback__contacts-line_active");
+	let getContscts5 = document.querySelector(".feedback__contacts-line5");
+	getContscts5.classList.toggle("feedback__contacts-line_active");
+	let getContscts6 = document.querySelector(".feedback__contacts-line6");
+	getContscts6.classList.toggle("feedback__contacts-line_active");
 }
 
 const swiper = new Swiper('.portfolio__slider', {
@@ -87,14 +97,24 @@ const swiperCaseTwo = new Swiper('.case-two__slider', {
 		prevEl: '.case-two__prev',
 	 },
 });
-const swiperCaseThree = new Swiper('.case-three__slider', {
 
+const swiperCaseThree = new Swiper('.case-three__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
 	navigation: {
 		nextEl: '.case-three__next',
 		prevEl: '.case-three__prev',
-	 },
+	},
+});
+
+const swiperForm = new Swiper('.form__both-slider', {
+	effect: 'coverflow',
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.form__both-next',
+		prevEl: '.form__both-prev',
+		disabledClass: 'form__both-disabled',
+	},
 });
 
 
@@ -134,3 +154,21 @@ function skillNode() {
 	skillNode.classList.toggle("skill__container_node");
 }
 
+document.querySelector(".feedback__form").addEventListener("click", fillForm);
+function fillForm() {
+	let switchLangEn = document.querySelector(".form__both");
+	switchLangEn.classList.add("form__both_active");
+}
+
+document.querySelector(".form-close__both").addEventListener("click", removeFillForm);
+function removeFillForm() {
+	let switchLangEn = document.querySelector(".form__both");
+	switchLangEn.classList.remove("form__both_active");
+}
+
+
+document.querySelector(".feedback__mark").addEventListener("click", feedbackForm);
+function feedbackForm() {
+	let switchLangEn = document.querySelector(".mark-popup");
+	switchLangEn.classList.remove("mark-popup_active");
+}
