@@ -41,125 +41,6 @@
 			</ul>
 			
 		</nav>
-		<form class="form form__customer" action="#">
-			<button class="form-close form-close__customer"></button>
-				<h3 class="form__title">Please fill the form</h3>
-				<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
-				<input class="form__name" type="text" placeholder="Name">
-				<input class="form__address" type="text" placeholder="Please choose an app">
-				<ul class="form__list">
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--telegram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--facebook"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--twitter"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--instagram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--viber"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--email"></button>
-					</li>
-				</ul>
-				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
-				<button class="form__submit">Submit</button>
-		</form>
-		<form class="form form__employer" action="#">
-			<button class="form-close form-close__employer"></button>
-			<h3 class="form__title">Please fill the form</h3>
-			<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out the form</h4>
-			<input class="form__name" type="text" placeholder="Name">
-			<input class="form__phone" type="number" placeholder="Phone number">
-			<textarea class="form__text" placeholder="Type here..."></textarea>
-			<button class="form__submit">Submit</button>
-		</form>
-		<div class=" mark-popup" action="#">
-			<button class="form-close form-close__mark"></button>
-			<h3 class="form__title">Please leave me <br> a feedback</h3>
-			<h4 class="form__subtitle">Below you can see the average estimate of all voters. Leave your mark and I will be so appreciative for your participation =)</h4>
-			
-			<form class="mark-popup__marks-form" action="#">
-				<ul class="mark-popup__marks-wrapper">
-				<li>
-				  <input type="radio" id="test1" name="radio-group" checked>
-				  <label for="test1"></label>
-				<li/>
-				<li>
-				  <input type="radio" id="test2" name="radio-group">
-				  <label for="test2"></label>
-				<li/>
-				<li>
-					<input type="radio" id="test3" name="radio-group">
-					<label for="test3"></label>
-				<li/>
-				<li>
-					<input type="radio" id="test4" name="radio-group">
-					<label for="test4"></label>
-				<li/>
-				<li>
-					<input type="radio" id="test5" name="radio-group">
-					<label for="test5"></label>
-				<li/>
-				</ul>
-				<p class="mark-popup__votes">Total votes: <span class="mark-popup__votes-num">58</span></p>
-				<button class="form__submit">Submit</button>
-			 </form>
-		</div>
-		<div class="form form__both" action="/">
-			<button class="form-close form-close__both"></button>
-			<h3 class="form__title">Please fill the form as</h3>
-			<div class="form__both-buttons">
-				<div class="form__both-prev">Employer</div>
-				<div class="form__both-next">Customer</div>
-			</div>
-
-			<form class="form__both-slider swiper">
-				<div class="form__both-wrapper swiper-wrapper">
-					<div class="swiper-slide form__both-slide">
-						<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out 		the form</h4>
-						<input class="form__name" type="text" placeholder="Name">
-						<input class="form__phone" type="number" placeholder="Phone number">
-						<textarea class="form__text" placeholder="Type here..."></textarea>
-						<button class="form__submit">Submit</button>
-
-					</div>
-					<div class="swiper-slide">
-						<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
-				<input class="form__name" type="text" placeholder="Name">
-				<input class="form__address" type="text" placeholder="Please choose an app">
-				<ul class="form__list">
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--telegram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--facebook"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--twitter"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--instagram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--viber"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--email"></button>
-					</li>
-				</ul>
-				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
-				<button class="form__submit">Submit</button>
-					</div>
-				</div>
-
-			</form>
-		</div>
 		<ul class="header-buttons">
 			<li class="header-buttons__item">
 				<button class="lang-btn">
@@ -174,8 +55,6 @@
 				</button>
 			</li>
 		</ul>
-
-
 	</header>
 	<main class="main">
 
@@ -343,6 +222,132 @@
 	<footer class="footer">
 		<span class="footer__copyrights">©Kasyanov Maksim 2022</span>
 	</footer>
+	<div class="form__wrapper form__customer">
+		<button class="form-close form-close__customer"></button>
+		<form class="form" action="#">
+			<h3 class="form__title">Please fill the form</h3>
+			<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
+			<input class="form__name" type="text" placeholder="Name">
+			<input class="form__address" type="text" placeholder="Please choose an app">
+			<ul class="form__list">
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--telegram"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--facebook"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--twitter"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--instagram"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--viber"></button>
+				</li>
+				<li class="form__list-item">
+					<button class="form__list-btn form__list-btn--email"></button>
+				</li>
+			</ul>
+			<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
+			<button class="form__submit">Submit</button>
+		</form>
+	</div>
+	<div class="form__wrapper form__employer">
+		<button class="form-close form-close__employer"></button>
+		<form class="form" action="#">
+			<h3 class="form__title">Please fill the form</h3>
+			<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out the form</h4>
+			<input class="form__name" type="text" placeholder="Name">
+			<input class="form__phone" type="number" placeholder="Phone number">
+			<textarea class="form__text" placeholder="Type here..."></textarea>
+			<button class="form__submit">Submit</button>
+		</form>
+	</div>
+	<div class="form__wrapper mark-popup">
+		<button class="form-close form-close__mark"></button>
+		<div class="form">
+			<h3 class="form__title">Please leave me <br> a feedback</h3>
+			<h4 class="form__subtitle">Below you can see the average estimate of all voters. Leave your mark and I will be so appreciative for your participation =)</h4>
+			<form class="mark-popup__marks-form" action="#">
+				<ul class="mark-popup__marks-wrapper">
+				<li>
+				  <input type="radio" id="test1" name="radio-group" checked>
+				  <label for="test1"></label>
+				<li/>
+				<li>
+				  <input type="radio" id="test2" name="radio-group">
+				  <label for="test2"></label>
+				<li/>
+				<li>
+					<input type="radio" id="test3" name="radio-group">
+					<label for="test3"></label>
+				<li/>
+				<li>
+					<input type="radio" id="test4" name="radio-group">
+					<label for="test4"></label>
+				<li/>
+				<li>
+					<input type="radio" id="test5" name="radio-group">
+					<label for="test5"></label>
+				<li/>
+				</ul>
+				<p class="mark-popup__votes">Total votes: <span class="mark-popup__votes-num">58</span></p>
+				<button class="form__submit">Submit</button>
+			</form>
+		</div>
+	</div>
+	<div class="form__wrapper form__both">
+		<button class="form-close form-close__both"></button>
+		<div class="form" action="/">
+			<h3 class="form__title">Please fill the form as</h3>
+			<div class="form__both-buttons">
+				<div class="form__both-prev">Employer</div>
+				<div class="form__both-next">Customer</div>
+			</div>
+
+			<form class="form__both-slider swiper">
+				<div class="form__both-wrapper swiper-wrapper">
+					<div class="swiper-slide form__both-slide">
+						<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out 		the form</h4>
+						<input class="form__name" type="text" placeholder="Name">
+						<input class="form__phone" type="number" placeholder="Phone number">
+						<textarea class="form__text" placeholder="Type here..."></textarea>
+						<button class="form__submit">Submit</button>
+
+					</div>
+					<div class="swiper-slide">
+						<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
+				<input class="form__name" type="text" placeholder="Name">
+				<input class="form__address" type="text" placeholder="Please choose an app">
+				<ul class="form__list">
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--telegram"></button>
+					</li>
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--facebook"></button>
+					</li>
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--twitter"></button>
+					</li>
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--instagram"></button>
+					</li>
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--viber"></button>
+					</li>
+					<li class="form__list-item">
+						<button class="form__list-btn form__list-btn--email"></button>
+					</li>
+				</ul>
+				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
+				<button class="form__submit">Submit</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 	
