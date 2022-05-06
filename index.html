@@ -24,7 +24,7 @@
 		<nav class="menu">
 			<ul class="menu__list">
 				<li class="menu__list-item">
-					<a class="menu__list-link menu__list-employer" href="#">Employers</a>
+					<button class="menu__list-link menu__list-employer">Employers</button>
 				</li>
 				<li class="menu__list-item">
 					<button class="menu__list-link menu__list-customer">Customers</button>
@@ -74,15 +74,19 @@
 						<div class="swiper-slide portfolio__slide portfolio__slide-1">
 							<div class="case-one__slider swiper">
 								<div class="swiper-wrapper case-one__wrapper">
-									<div class="swiper-slide case-one__slide case-one__slide-1">
-										<div class="case-one__next"></div>
-										
-										<img src="images/woldie.jpg" alt="">
-									</div>
-									<div class="swiper-slide case-one__slide case-one__slide-2">
+									<div class="case-nav">
 										<div class="case-one__prev">
 											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
 										</div>
+										<div class="case-one__next">
+											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
+											
+										</div>
+									</div>
+									<div class="swiper-slide case-one__slide case-one__slide-1">
+										<img src="images/woldie.jpg" alt="">
+									</div>
+									<div class="swiper-slide case-one__slide case-one__slide-2">
 										<p class="case-one__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
 										<p class="case-one__slide-2--text"></p>
 										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
@@ -96,15 +100,20 @@
 						<div class="swiper-slide portfolio__slide portfolio__slide-2">
 							<div class="case-two__slider swiper">
 								<div class="swiper-wrapper case-two__wrapper">
-									<div class="swiper-slide case-two__slide case-two__slide-1">
-										<img src="images/kushop.jpg" alt="">
-										<div class="case-two__next"></div>
-										
-									</div>
-									<div class="swiper-slide case-two__slide case-two__slide-2">
+									<div class="case-nav">
 										<div class="case-two__prev">
 											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
 										</div>
+										<div class="case-two__next">
+											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
+											
+										</div>
+									</div>
+									<div class="swiper-slide case-two__slide case-two__slide-1">
+										<img src="images/kushop.jpg" alt="">
+										
+									</div>
+									<div class="swiper-slide case-two__slide case-two__slide-2">
 										<p class="case-two__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
 										<p class="case-two__slide-2--text"></p>
 										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
@@ -115,14 +124,19 @@
 						<div class="swiper-slide portfolio__slide portfolio__slide-3">
 							<div class="case-three__slider swiper">
 								<div class="swiper-wrapper case-three__wrapper">
-									<div class="swiper-slide case-three__slide case-three__slide-1">
-										<div class="case-three__next"></div>
-										<img src="images/bicycles.jpg" alt="">
-									</div>
-									<div class="swiper-slide case-three__slide case-three__slide-2">
+									<div class="case-nav">
 										<div class="case-three__prev">
 											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
 										</div>
+										<div class="case-three__next">
+											<img class="case-rotate" src="images/arrowscycle.svg" alt="slide switcher">
+											
+										</div>
+									</div>
+									<div class="swiper-slide case-three__slide case-three__slide-1">
+										<img src="images/bicycles.jpg" alt="">
+									</div>
+									<div class="swiper-slide case-three__slide case-three__slide-2">
 										<p class="case-three__slide-2--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt earum adipisci placeat aliquid. Tempora, dolor.</p>
 										<p class="case-three__slide-2--text"></p>
 										<a class="case-one__slide-2--button button" href="https://www.google.com" target="_blank">View site</a>
@@ -225,8 +239,8 @@
 	<div class="form__wrapper form__customer">
 		<button class="form-close form-close__customer"></button>
 		<form class="form" action="#">
-			<h3 class="form__title">Please fill the form</h3>
-			<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
+			<h2 class="form__title">Please fill the form</h2>
+			<p class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</p>
 			<input class="form__name" type="text" placeholder="Name">
 			<input class="form__address" type="text" placeholder="Please choose an app">
 			<ul class="form__list">
