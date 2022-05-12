@@ -85,9 +85,10 @@ const swiperCaseOne = new Swiper('.case-one__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
 	navigation: {
+		disabledClass: 'portfolio__nav-disabled',
 		nextEl: '.case-one__next',
 		prevEl: '.case-one__prev',
-	 },
+	},
 });
 
 const swiperCaseTwo = new Swiper('.case-two__slider', {
@@ -95,15 +96,17 @@ const swiperCaseTwo = new Swiper('.case-two__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
 	navigation: {
+		disabledClass: 'portfolio__nav-disabled',
 		nextEl: '.case-two__next',
 		prevEl: '.case-two__prev',
-	 },
+	},
 });
 
 const swiperCaseThree = new Swiper('.case-three__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
 	navigation: {
+		disabledClass: 'portfolio__nav-disabled',
 		nextEl: '.case-three__next',
 		prevEl: '.case-three__prev',
 	},
@@ -119,6 +122,15 @@ const swiperForm = new Swiper('.form__both-slider', {
 	},
 });
 
+
+
+
+document.querySelector(".skill__scss").addEventListener("click", skillScss);
+function skillScss() {
+	let skillScss = document.querySelector(".skill__container");
+	skillScss.classList.toggle("skill__container_scss");
+
+}
 
 document.querySelector(".skill__scss").addEventListener("click", skillScss);
 function skillScss() {
@@ -156,28 +168,79 @@ function skillNode() {
 	skillNode.classList.toggle("skill__container_node");
 }
 
+
+// ! Form
 document.querySelector(".feedback__form").addEventListener("click", fillForm);
 function fillForm() {
 	let switchLangEn = document.querySelector(".form__both");
 	switchLangEn.classList.add("form__both_active");
 }
-
 document.querySelector(".form-close__both").addEventListener("click", removeFillForm);
 function removeFillForm() {
 	let switchLangEn = document.querySelector(".form__both");
 	switchLangEn.classList.remove("form__both_active");
 }
-
-
 document.querySelector(".feedback__mark").addEventListener("click", feedbackMark);
 function feedbackMark() {
-	let feedbackMark = document.querySelector(".mark-popup");
-	feedbackMark.classList.add("mark-popup_active");
+	let feedbackMark = document.querySelector(".form__mark-popup");
+	feedbackMark.classList.add("form__mark-popup_active");
 }
-
 document.querySelector(".form-close__mark").addEventListener("click", removeMarkForm);
 function removeMarkForm() {
-	let feedbackMark = document.querySelector(".mark-popup");
-	feedbackMark.classList.remove("mark-popup_active");
+	let feedbackMark = document.querySelector(".form__mark-popup");
+	feedbackMark.classList.remove("form__mark-popup_active");
 }
+
+
+
+
+
+// ! Gratitude
+
+const userName = document.querySelector(".gratitude__data"); // ! Определение родителя
+
+function gratitudePopup(){
+	setTimeout(() => {
+		const description = document.querySelector(".gratitude__text");
+		description.remove();
+	}, 5000);
+	setTimeout(() => {
+		const gratitudeRemove = document.querySelector(".gratitude");
+		gratitudeRemove.classList.remove("gratitude_active");
+	}, 4000);
+	let feedbackMark = document.querySelector(".gratitude");
+	feedbackMark.classList.add("gratitude_active");
+}
+
+function gratitudeDataCustomer(){
+	let data = document.getElementById("gratitude__value-customer").value;
+	let text = document.createElement('span'); // ! Создание элемента
+	text.classList.add('gratitude__text'); // ! Присвоение класса
+	userName.prepend(text); // ! Вставка элемента
+	text.innerHTML = `\u00a0${data},\u00a0` ; // ! Запись данных
+}
+function gratitudeDataEmployer(){
+	let data = document.getElementById("gratitude__value-employer").value;
+	let text = document.createElement('span'); // ! Создание элемента
+	text.classList.add('gratitude__text'); // ! Присвоение класса
+	userName.prepend(text); // ! Вставка элемента
+	text.innerHTML = `\u00a0${data},\u00a0` ; // ! Запись данных
+}
+
+
+document.querySelector(".form__submit-customer").addEventListener("click", gratitudeCustomer);
+function gratitudeCustomer() {
+	gratitudeDataCustomer();
+	gratitudePopup();
+}
+
+
+document.querySelector(".form__submit-employer").addEventListener("click", gratitudeEmployer);
+function gratitudeEmployer() {
+	gratitudeDataEmployer();
+	gratitudePopup();
+}
+
+
+
 

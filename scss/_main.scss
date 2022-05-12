@@ -11,7 +11,7 @@ body{
 }
 section{
 	padding: 0 20px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	// border-bottom: 1px solid #21DB7E;
 }
 button{
@@ -36,16 +36,6 @@ h2{
 	box-shadow: 0px 4px 20px rgba(15, 14, 14, 0.9);
 	background-color: #181818ea;
 }
-
-.header-buttons{
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 90px;
-	height: 122px;
-}
-
 .menu{
 	position:fixed;
 	top: 0;
@@ -78,7 +68,6 @@ h2{
 		margin-top: 70px;
 	}
 }
-
 .form{
 	width: 330px;
 	&__wrapper{
@@ -121,6 +110,26 @@ h2{
 		.form__list{
 			width: 325px;
 		}
+	}
+	&__marks-wrapper{
+		margin: 0 auto 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__mark-popup{
+		transform: translateX(100vw);
+		display: flex;
+		justify-content: start;
+		flex-direction: column;
+		align-items: center;
+		&_active{
+			transform: translateX(0vw);
+		}
+	}
+	&__votes{
+		width: 250px;
+		margin: 0 auto 30px;
+		text-align: center;
 	}
 	&__title{
 		margin: 80px auto 20px;
@@ -255,7 +264,26 @@ h2{
 		}
 	}
 }
-
+.gratitude{
+	position:fixed;
+	z-index: 9;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #181818;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(100vw);
+	transition: all .5s;
+	&_active{
+		transform: translateX(0%);
+	}
+	&__data{
+		color: #21DB7E;
+	}
+}
 
 .intro{
 	height: 100vh;
@@ -291,23 +319,15 @@ h2{
 		box-shadow: 0px 0px 15px #21DB7E;
 	}
 }
-.slider{
-	position: relative;
-	margin: 0 auto 30px;
-	// display: flex;
-	width: 230px;
-	height: 400px;
-}
 .portfolio{
 	position: relative;
 	padding-bottom: 50px;
-	&__bullets{
-		position: static;
-		width: 150px !important;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0 auto;
+	&__slider{
+		position: relative;
+		margin: 0 auto 30px;
+		// display: flex;
+		width: 230px;
+		height: 400px;
 	}
 	&__navigation{
 		position: absolute;
@@ -322,6 +342,27 @@ h2{
 		border: 1px solid #fff;
 		box-shadow: 0px 0px 5px #fff;
 	}
+	&__case-nav{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: calc(50% - 25px);
+		right: -25px;
+		
+	}
+	&__case-rotate{
+		width: 90%;
+		position: absolute;
+		animation: portfolio__case-rotate 3s linear infinite both;
+	}
+	&__bullets{
+		position: static;
+		width: 150px !important;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+	}
 	&__bullet{
 		display: block;
 		width: 14px;
@@ -334,8 +375,6 @@ h2{
 		box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.438);
 		background-color: #ffffff;
 	}
-	
-
 	&__slider{
 		height: 400px;
 		width: 230px;
@@ -347,24 +386,15 @@ h2{
 		height: 400px;
 		background-size: cover;
 	}
-
-}
-
-.case-nav{
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: calc(50% - 25px);
-	right: -25px;
-	
+	.portfolio__nav-disabled{
+		z-index: -1;
+	}
 }
 .case-one,
 .case-two,
 .case-three{
 	width: 100%;
 	height: 100%;
-	&__wrapper{
-	}
 	&__slide-1{
 		border-right: 1px solid #fff;
 		position: relative;
@@ -376,13 +406,11 @@ h2{
 		height: 408px;
 		width: 100%;
 		background-color: #181818;
-		// padding: 15px;
 	}
 	&__slide-2--text{
 		font-family: 'M PLUS 1p', sans-serif;
 		width: 200px;
 		margin: 15px auto 0;
-		// text-align: center;
 		margin-bottom: 30px;
 	}
 	&__slide-2--button{
@@ -391,7 +419,6 @@ h2{
 	&__prev,
 	&__next{
 		position: absolute;
-
 		z-index: 9;
 		width: 100%;
 		height: 100%;
@@ -405,53 +432,25 @@ h2{
 		transition: all .5s;
 		border-radius: 50%;
 		border: 1px solid #181818;
-
 	}
 	&__prev{
 		position: absolute;
-		// left: -51px;
-		// background-image: url('../images/arrowscycle.svg');
 		background-repeat: no-repeat;
 		background-size: 90%;
 		background-position: center center;
 		
 	}
-	&__next{
-	}
 }
-.case-rotate{
-	width: 90%;
-	position: absolute;
-	animation: case-rotate 3s linear infinite both;
-}
-.swiper-button-disabled{
-	z-index: -1;
-}
-
-@keyframes case-rotate {
-	0% {
-	  transform: rotate(0);
-	}
-	50%{
-		
-		transform: rotate(180deg);
-	}
-	100% {
-	  transform: rotate(360deg);
-	}
- }
- .skill {
+.skill {
 	position: relative;
 	background: rgba(24, 24, 24, 0.1);
 	backdrop-filter: blur(3px);
 	transition: all .5s;
 	width: 100%;
 	height: 100%;
-	
 	&__wrapper{
 		margin-bottom: 50px;
 		padding-bottom: 50px;
-		
 	}
 	&__container {
 		position: relative;
@@ -467,11 +466,7 @@ h2{
 		background-size: 80%;
 		background-position: center center;
 		background-repeat: no-repeat;
-		&_scss{
-			grid-template-columns: 1fr 0%;
-			grid-template-rows: 100% 0% 0%;
-			transition: all 1s;
-			grid-gap: 10px;
+		&_active{
 			.skill {
 				position: relative;
 				background: rgba(24, 24, 24, 0.7);
@@ -479,22 +474,32 @@ h2{
 			}
 			.skill__info{
 				opacity: 1;
-				width: 300px;
-				transition-delay: .4s;
+				transition-delay: 2.4s;
+				transition: all 1.5s;
 			}
 			.skill__img{
 				background-position: top center;
 				background-size: 20%;
-				margin: 0 auto;
 			}
 			.skill__link{
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				width: 50%;
 				height: 50px;
 				border: 2px solid #21DB7E;
 				font-size: 14px;
+				opacity: 1;
+				transition-delay: all 2s;
+				transition: all 1s;
 			}
+		}
+		&_scss{
+			grid-template-columns: 1fr 0%;
+			grid-template-rows: 100% 0% 0%;
+			transition: all 0s;
+			grid-gap: 10px;
+
 		}
 		&_gulp{
 			grid-template-columns: 0%  100%;
@@ -520,7 +525,6 @@ h2{
 	&__img{
 		position: relative;
 		z-index: 2;
-		transition: all .5s;
 		width: 100%;
 		height: 100%;
 		background-size: contain;
@@ -530,31 +534,32 @@ h2{
 	}
 	&__info{
 		position: absolute;
-		left: 0;
+		left: 50%;
 		bottom: 0;
-		width: 93%;
+		width: 270px;
 		height: 80%;
 		opacity: 0;
 		bottom: 0;
 		font-family: 'M1 PLUS 1';
 		user-select: none;
+		opacity: 0;
+		transform: translateX(-50%);
 	}
 	&__link{
 		position: absolute;
 		bottom: 50px;
 		left: 50%;
 		z-index: 9;
-		width: 50%;
+		width: 0%;
 		height: 0;
 		margin: 0 auto;
 		transform: translateX(-50%);
 		border: 0px solid #21DB7E;
 		font-size: 0;
-		transition: all .5s;
-		display: none;
+		opacity: 0;
+		transition: all 0s;
 	}
-	&__front {
-		transition: all .5s;
+	&__img {
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 50%;
@@ -566,17 +571,14 @@ h2{
 	&__cwars,
 	&__js,
 	&__node{
-		transition: all .5s;
 		height: 100%;
 		width: 100%;
 	}
 	&__scss{
 		border-top: none;
 		border-left: none;
-	}
-
-	&__scss-img{
 		background-image: url('../images/scss.svg');
+		
 	}
 	&__gulp{
 		background-image: url('../images/gulp.svg');
@@ -653,8 +655,8 @@ h2{
 		height: 80px;
 		background-color: #fff;
 		z-index: 2;
-
 	}
+
 	&__contacts-link{
 		position: absolute;
 		top: 50%;
@@ -723,34 +725,6 @@ h2{
 		transition-delay: .25s;
 		z-index: -1;
 		right: calc(50% - 40px);
-	}
-}
-.mark-popup{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	transform: translateX(110vw);
-	transition: all .5s;
-	background-color: #181818;
-	z-index: 9;
-	display: flex;
-	justify-content: start;
-	flex-direction: column;
-	align-items: center;
-	&_active{
-		transform: translateX(0vw);
-	}
-	&__votes{
-		width: 250px;
-		margin: 0 auto 30px;
-		text-align: center;
-	}
-	&__marks-wrapper{
-		margin: 0 auto 20px;
-		display: flex;
-		justify-content: space-between;
 	}
 }
 .footer {

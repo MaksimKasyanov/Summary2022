@@ -31,6 +31,12 @@
 				color: #181818;
 			}
 		}
+		.form-close{
+			&::before,
+			&::after{
+				background-color: #181818;
+			}
+		}
 		.burger{
 			&__line{
 				background-color: #181818;
@@ -42,13 +48,23 @@
 				color: #181818;
 			}
 		}
+		.form{
+			&__wrapper{
+				background-color: #fff;
+			}
+			&__name,
+			&__address,
+			&__phone,
+			&__text{
+				border: 2px solid #181818;
+			}
+		}
 		.theme-btn,
 		.lang-btn{
 			box-shadow: 0px 0px 2px #181818, inset 0px 0px 1px .5px #fff;
 		}
 		.button{
 			color: #21DB7E;
-
 			border: 2px solid #181818;
 			box-shadow: 0px 0px 0px #21DB7E;
 		}
