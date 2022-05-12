@@ -198,43 +198,38 @@ function removeMarkForm() {
 // ! Gratitude
 
 const userName = document.querySelector(".gratitude__data"); // ! Определение родителя
+let text = document.createElement('span'); // ! Создание элемента
+text.classList.add('gratitude__text'); // ! Присвоение класса
 
 function gratitudePopup(){
+	let gratitudeActive = document.querySelector(".gratitude");
+	gratitudeActive.classList.add("gratitude_active");
 	setTimeout(() => {
-		const description = document.querySelector(".gratitude__text");
-		description.remove();
+		const gratitudeDescription = document.querySelector(".gratitude__text");
+		gratitudeDescription.remove();
 	}, 5000);
 	setTimeout(() => {
 		const gratitudeRemove = document.querySelector(".gratitude");
 		gratitudeRemove.classList.remove("gratitude_active");
 	}, 4000);
-	let feedbackMark = document.querySelector(".gratitude");
-	feedbackMark.classList.add("gratitude_active");
+
 }
 
 function gratitudeDataCustomer(){
 	let data = document.getElementById("gratitude__value-customer").value;
-	let text = document.createElement('span'); // ! Создание элемента
-	text.classList.add('gratitude__text'); // ! Присвоение класса
+	text.innerHTML = `\u00a0${data},\u00a0`; // ! Запись данных
 	userName.prepend(text); // ! Вставка элемента
-	text.innerHTML = `\u00a0${data},\u00a0` ; // ! Запись данных
 }
 function gratitudeDataEmployer(){
 	let data = document.getElementById("gratitude__value-employer").value;
-	let text = document.createElement('span'); // ! Создание элемента
-	text.classList.add('gratitude__text'); // ! Присвоение класса
+	text.innerHTML = `\u00a0${data},\u00a0`; // ! Запись данных
 	userName.prepend(text); // ! Вставка элемента
-	text.innerHTML = `\u00a0${data},\u00a0` ; // ! Запись данных
 }
-
-
 document.querySelector(".form__submit-customer").addEventListener("click", gratitudeCustomer);
 function gratitudeCustomer() {
 	gratitudeDataCustomer();
 	gratitudePopup();
 }
-
-
 document.querySelector(".form__submit-employer").addEventListener("click", gratitudeEmployer);
 function gratitudeEmployer() {
 	gratitudeDataEmployer();
