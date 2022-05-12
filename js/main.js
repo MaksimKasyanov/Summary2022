@@ -24,32 +24,11 @@ function feedbackContacts() {
 	let markBtn = document.querySelector(".feedback__mark");
 	markBtn.classList.toggle("feedback__mark_active");
 }
-document.querySelector(".menu__list-customer").addEventListener("click", formCustomer);
-function formCustomer() {
-	let customerForm = document.querySelector(".form__customer");
-	customerForm.classList.toggle("form__customer_active");
-}
-document.querySelector(".form-close__customer").addEventListener("click", closeFormCustomer);
-function closeFormCustomer() {
-	let customerForm = document.querySelector(".form__customer");
-	customerForm.classList.remove("form__customer_active");
-}
-document.querySelector(".menu__list-employer").addEventListener("click", formEmployer);
-function formEmployer() {
-	let employerForm = document.querySelector(".form__employer");
-	employerForm.classList.toggle("form__employer_active");
-}
-document.querySelector(".form-close__employer").addEventListener("click", closeFormEmployer);
-function closeFormEmployer() {
-	let feedbackBtn = document.querySelector(".form__employer");
-	feedbackBtn.classList.remove("form__employer_active");
-}
 document.querySelector(".lang-btn").addEventListener("click", switchLang);
 function switchLang() {
 	let switchLangEn = document.querySelector(".lang-btn");
 	switchLangEn.classList.toggle("lang-btn_active");
 }
-
 document.querySelector(".feedback__btn-contacts").addEventListener("click", getContscts);
 function getContscts() {
 	let getContscts1 = document.querySelector(".feedback__contacts-line1");
@@ -80,7 +59,6 @@ const swiper = new Swiper('.portfolio__slider', {
 		bulletActiveClass: 'portfolio__bullet-active',
 	},
 });
-
 const swiperCaseOne = new Swiper('.case-one__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
@@ -90,7 +68,6 @@ const swiperCaseOne = new Swiper('.case-one__slider', {
 		prevEl: '.case-one__prev',
 	},
 });
-
 const swiperCaseTwo = new Swiper('.case-two__slider', {
 
 	effect: 'slide',
@@ -101,7 +78,6 @@ const swiperCaseTwo = new Swiper('.case-two__slider', {
 		prevEl: '.case-two__prev',
 	},
 });
-
 const swiperCaseThree = new Swiper('.case-three__slider', {
 	effect: 'slide',
 	spaceBetween: 0,
@@ -111,13 +87,13 @@ const swiperCaseThree = new Swiper('.case-three__slider', {
 		prevEl: '.case-three__prev',
 	},
 });
-
 const swiperForm = new Swiper('.form__both-slider', {
 	effect: 'coverflow',
+	// loop: true,
 	spaceBetween: 0,
 	navigation: {
-		nextEl: '.form__both-next',
 		prevEl: '.form__both-prev',
+		nextEl: '.form__both-next',
 		disabledClass: 'form__both-disabled',
 	},
 });
@@ -131,37 +107,31 @@ function skillScss() {
 	skillScss.classList.toggle("skill__container_scss");
 
 }
-
 document.querySelector(".skill__scss").addEventListener("click", skillScss);
 function skillScss() {
 	let skillScss = document.querySelector(".skill__container");
 	skillScss.classList.toggle("skill__container_scss");
 }
-
 document.querySelector(".skill__gulp").addEventListener("click", skillGulp);
 function skillGulp() {
 	let skillGulp = document.querySelector(".skill__container");
 	skillGulp.classList.toggle("skill__container_gulp");
 }
-
 document.querySelector(".skill__git").addEventListener("click", skillGit);
 function skillGit() {
 	let skillGulp = document.querySelector(".skill__container");
 	skillGulp.classList.toggle("skill__container_git");
 }
-
 document.querySelector(".skill__cwars").addEventListener("click", skillCwars);
 function skillCwars() {
 	let skillCwars = document.querySelector(".skill__container");
 	skillCwars.classList.toggle("skill__container_cwars");
 }
-
 document.querySelector(".skill__js").addEventListener("click", skillJs);
 function skillJs() {
 	let skillJs = document.querySelector(".skill__container");
 	skillJs.classList.toggle("skill__container_js");
 }
-
 document.querySelector(".skill__node").addEventListener("click", skillNode);
 function skillNode() {
 	let skillNode = document.querySelector(".skill__container");
@@ -170,11 +140,32 @@ function skillNode() {
 
 
 // ! Form
+document.querySelector(".menu__list-employer").addEventListener("click", employerForm);
+function employerForm() {
+
+	let formEmployer = document.querySelector(".form__both");
+	formEmployer.classList.add("form__both_active");
+	let formSwitchNone = document.querySelector(".form__both-buttons");
+	formSwitchNone.classList.add("form__both-buttons_none");
+}
+
+document.querySelector(".menu__list-customer").addEventListener("click", customerForm);
+function customerForm() {
+
+	let formEmployer = document.querySelector(".form__both");
+	formEmployer.classList.add("form__both_active");
+
+	let formSwitchNone = document.querySelector(".form__both-buttons");
+	formSwitchNone.classList.add("form__both-buttons_none");
+}
+
 document.querySelector(".feedback__form").addEventListener("click", fillForm);
 function fillForm() {
-	let switchLangEn = document.querySelector(".form__both");
-	switchLangEn.classList.add("form__both_active");
+	let formActive = document.querySelector(".form__both");
+	formActive.classList.add("form__both_active");
+
 }
+
 document.querySelector(".form-close__both").addEventListener("click", removeFillForm);
 function removeFillForm() {
 	let switchLangEn = document.querySelector(".form__both");
@@ -195,13 +186,15 @@ function removeMarkForm() {
 
 
 
-// ! Gratitude
+// ! Form  Gratitude
 
 const userName = document.querySelector(".gratitude__data"); // ! Определение родителя
 let text = document.createElement('span'); // ! Создание элемента
 text.classList.add('gratitude__text'); // ! Присвоение класса
 
 function gratitudePopup(){
+	let formSwitchNone = document.querySelector(".form__both-buttons");
+	formSwitchNone.classList.remove("form__both-buttons_none");
 	let gratitudeActive = document.querySelector(".gratitude");
 	gratitudeActive.classList.add("gratitude_active");
 	setTimeout(() => {
@@ -212,7 +205,6 @@ function gratitudePopup(){
 		const gratitudeRemove = document.querySelector(".gratitude");
 		gratitudeRemove.classList.remove("gratitude_active");
 	}, 4000);
-
 }
 
 function gratitudeDataCustomer(){
@@ -227,14 +219,19 @@ function gratitudeDataEmployer(){
 }
 document.querySelector(".form__submit-customer").addEventListener("click", gratitudeCustomer);
 function gratitudeCustomer() {
+	let formSwitchFlex = document.querySelector(".form__both-buttons");
+	formSwitchFlex.classList.remove("form__both-buttons_none");
 	gratitudeDataCustomer();
 	gratitudePopup();
 }
 document.querySelector(".form__submit-employer").addEventListener("click", gratitudeEmployer);
 function gratitudeEmployer() {
+	let formSwitchFlex = document.querySelector(".form__both-buttons");
+	formSwitchFlex.classList.remove("form__both-buttons_none");
 	gratitudeDataEmployer();
 	gratitudePopup();
 }
+
 
 
 

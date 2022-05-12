@@ -23,10 +23,10 @@
 		<nav class="menu">
 			<ul class="menu__list">
 				<li class="menu__list-item">
-					<button class="menu__list-link menu__list-employer">Employers</button>
+					<button class="menu__list-link form__both-prev menu__list-employer">Employers</button>
 				</li>
 				<li class="menu__list-item">
-					<button class="menu__list-link menu__list-customer">Customers</button>
+					<button class="menu__list-link form__both-next menu__list-customer">Customers</button>
 				</li>
 				<li class="menu__list-item">
 					<button class="menu__list-link">Contacts</button>
@@ -225,48 +225,8 @@
 	<footer class="footer">
 		<span class="footer__copyrights">©Kasyanov Maksim 2022</span>
 	</footer>
-	<div class="form__wrapper form__customer">
-		<button class="form-close form-close__customer"></button>
-		<form class="form" action="#">
-			<h2 class="form__title">Please fill the form</h2>
-			<p class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</p>
-			<input class="form__name" id="gratitude__value-customer" type="text" placeholder="Name">
-			<input class="form__address" type="text" placeholder="Please choose an app">
-			<ul class="form__list">
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--telegram"></button>
-				</li>
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--facebook"></button>
-				</li>
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--twitter"></button>
-				</li>
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--instagram"></button>
-				</li>
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--viber"></button>
-				</li>
-				<li class="form__list-item">
-					<button class="form__list-btn form__list-btn--email"></button>
-				</li>
-			</ul>
-			<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
-			<button class="button form__submit form__submit-customer" type="submit">Submit</button>
-		</form>
-	</div>
-	<div class="form__wrapper form__employer">
-		<button class="form-close form-close__employer"></button>
-		<form class="form" action="#">
-			<h3 class="form__title">Please fill the form</h3>
-			<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out the form</h4>
-			<input class="form__name" id="gratitude__value-employer" type="text" placeholder="Name">
-			<input class="form__phone" type="number" placeholder="Phone number">
-			<textarea class="form__text" placeholder="Type here..."></textarea>
-			<button class="button form__submit form__submit-employer" type="submit">Submit</button>
-		</form>
-	</div>
+
+
 	<div class="form form__wrapper form__mark-popup">
 			<button class="form-close form-close__mark"></button>
 			<h3 class="form__title">Please leave me <br> a feedback</h3>
@@ -308,42 +268,42 @@
 				<div class="form__both-next">Customer</div>
 			</div>
 
-			<form class="form__both-slider swiper">
+			<form class="form__both-slider  swiper">
 				<div class="form__both-wrapper swiper-wrapper">
-					<div class="swiper-slide form__both-slide">
+					<div class="swiper-slide form__employer-slide form__both-slide">
 						<h4 class="form__subtitle">If you have an offer, or just wnat to share your opinion about this site, fill out 		the form</h4>
-						<input class="form__name" type="text" placeholder="Name">
+						<input class="form__name" id="gratitude__value-employer" type="text" placeholder="Name">
 						<input class="form__phone" type="number" placeholder="Phone number">
 						<textarea class="form__text" placeholder="Type here..."></textarea>
-						<button class="form__submit">Submit</button>
+						<button class="form__submit form__submit-employer" type="button">Submit</button>
 
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide form__customer-slide">
 						<h4 class="form__subtitle">If you want to order any progect fill out the form and I will contact you as soon as i can.</h4>
-				<input class="form__name" type="text" placeholder="Name">
-				<input class="form__address" type="text" placeholder="Please choose an app">
-				<ul class="form__list">
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--telegram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--facebook"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--twitter"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--instagram"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--viber"></button>
-					</li>
-					<li class="form__list-item">
-						<button class="form__list-btn form__list-btn--email"></button>
-					</li>
-				</ul>
-				<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
-				<button class="form__submit">Submit</button>
+						<input class="form__name" id="gratitude__value-customer" type="text" placeholder="Name">
+						<input class="form__address" type="text" placeholder="Please choose an app">
+						<ul class="form__list">
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--telegram"></button>
+							</li>
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--facebook"></button>
+							</li>
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--twitter"></button>
+							</li>
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--instagram"></button>
+							</li>
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--viber"></button>
+							</li>
+							<li class="form__list-item">
+								<button class="form__list-btn form__list-btn--email"></button>
+							</li>
+						</ul>
+						<p class="form__descr">Just choose where do you want to get the answer and I’ll text you soon</p>
+				<button class="form__submit form__submit-customer" type="button">Submit</button>
 					</div>
 				</div>
 
@@ -351,7 +311,7 @@
 		</div>
 	</div>
 	<div class="gratitude">
-		<p class="gratitude__text-wrapper">Thank you<span class="gratitude__data"></span>I'll text you back soon!</p>
+		<p class="gratitude__text-wrapper">Thank you <span class="gratitude__data"></span> I'll text you back soon!</p>
 	</div>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>

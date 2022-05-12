@@ -67,6 +67,13 @@ h2{
 	&__list-link--resume{
 		margin-top: 70px;
 	}
+	.form__both-prev,
+	.form__both-next{
+		&::after{
+
+			display: none;
+		}
+	}
 }
 .form{
 	width: 330px;
@@ -240,6 +247,9 @@ h2{
 		margin: 0 auto 20px;
 		justify-content: space-between;
 		user-select: none;
+		&_none{
+			display: none;
+		}
 	}
 	&__both-prev,
 	&__both-next{
