@@ -140,24 +140,13 @@ function skillNode() {
 
 
 // ! Form
-document.querySelector(".menu__list-employer").addEventListener("click", employerForm);
+document.querySelector(".menu__link-cooperation").addEventListener("click", employerForm);
 function employerForm() {
-
 	let formEmployer = document.querySelector(".form__both");
 	formEmployer.classList.add("form__both_active");
-	let formSwitchNone = document.querySelector(".form__both-buttons");
-	formSwitchNone.classList.add("form__both-buttons_none");
 }
 
-document.querySelector(".menu__list-customer").addEventListener("click", customerForm);
-function customerForm() {
 
-	let formEmployer = document.querySelector(".form__both");
-	formEmployer.classList.add("form__both_active");
-
-	let formSwitchNone = document.querySelector(".form__both-buttons");
-	formSwitchNone.classList.add("form__both-buttons_none");
-}
 
 document.querySelector(".feedback__form").addEventListener("click", fillForm);
 function fillForm() {

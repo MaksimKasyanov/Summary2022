@@ -87,6 +87,39 @@
 				background-color: #181818;
 			}
 		}
+		.skill{
+			background: rgba(255, 255, 255, 0.1);
+			&__svg{
+				fill: #000;
+			}
+			&__content {
+				border: 4px solid #000;
+			}
+			&__scss{
+				border-top: none;
+				border-left: none;
+				
+			}
+			&__gulp{
+				border-top: none;
+				border-right: none;
+			}
+			&__git{
+				border-left: none;
+			}
+			&__cwars{
+				border-right: none;
+			}
+			
+			&__js{
+				border-left: none;
+				border-bottom: none;
+			}
+			&__node{
+				border-right: none;
+				border-bottom: none;
+			}
+		}
 		.feedback {
 			&__btn {
 				border: 2px solid #181818;
