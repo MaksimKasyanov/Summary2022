@@ -4,7 +4,7 @@ window.onload = function(){
 		preloader.classList.add("preloader__delete");
 		let page = document.querySelector(".page");
 		page.classList.add("page__loaded");
-	}, 1000);
+	}, 3000);
 }
 
 document.querySelector(".burger").addEventListener("click", menu);
