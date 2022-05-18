@@ -1,3 +1,12 @@
+window.onload = function(){
+	setTimeout(() => {
+		let preloader = document.querySelector(".preloader");
+		preloader.classList.add("preloader__delete");
+		let page = document.querySelector(".page");
+		page.classList.add("page__loaded");
+	}, 1000);
+}
+
 document.querySelector(".burger").addEventListener("click", menu);
 function menu() {
 	let burger = document.querySelector(".burger");
@@ -146,8 +155,6 @@ function employerForm() {
 	formEmployer.classList.add("form__both_active");
 }
 
-
-
 document.querySelector(".feedback__form").addEventListener("click", fillForm);
 function fillForm() {
 	let formActive = document.querySelector(".form__both");
@@ -170,10 +177,6 @@ function removeMarkForm() {
 	let feedbackMark = document.querySelector(".form__mark-popup");
 	feedbackMark.classList.remove("form__mark-popup_active");
 }
-
-
-
-
 
 // ! Form  Gratitude
 
