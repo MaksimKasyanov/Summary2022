@@ -288,7 +288,6 @@ h2{
 .intro{
 	height: 100vh;
 	padding-left: 20px;
-
 	&__text{
 		padding-top: 200px;
 		color: #fff;
@@ -440,13 +439,19 @@ h2{
 		
 	}
 }
-.skill {
+.skills {
 	position: relative;
-	background: rgba(24, 24, 24, 0.1);
-	backdrop-filter: blur(3px);
-	transition: all .5s;
-	width: 100%;
-	height: 100%;
+	width: 320px;
+	height: 490px;
+	display: grid;
+	transition: all 1.25s;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 15px;
+	background-image: url('../images/skills-bgsvg.svg');
+	background-size: 80%;
+	background-position: center center;
+	background-repeat: no-repeat;
 	&__wrapper{
 		margin-bottom: 50px;
 		padding-bottom: 50px;
@@ -454,164 +459,118 @@ h2{
 		align-items: center;
 		flex-direction: column;
 	}
-	&__container {
-		position: relative;
-		transition: all .25s;
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 33.33% 33.33% 33.33%;
-		grid-gap: 15px;
-		width: 320px;
-		height: 490px;
-		background-image: url('../images/skills-bgsvg.svg');
-		background-size: 80%;
-		background-position: center center;
-		background-repeat: no-repeat;
-		margin-left: -7.5px;
-		&_scss{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 1fr 0%;
-			grid-template-rows: 100% 0% 0%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			.skill__svg-scss{
-				display: block;
-				top: 50px;
-			}
-			.skill__git,
-			.skill__cwars{
-				border-bottom: none;
-			}
-
+	&__active{
+		transition: all 0s;
+		grid-gap: 10px;
+		.skills__item{
+			background: rgba(24, 24, 24, 0.8);
 		}
-		&_gulp{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 0%  100%;
-			grid-template-rows: 100% 0% 0%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			
-			.skill__svg-gulp{
-				display: block;
-				top: 50px;
-			}
-			.skill__git,
-			.skill__cwars{
-				border-bottom: none;
-			}
-		}
-		&_git{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 100% 0%;
-			grid-template-rows: 0% 100% 0%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			
-			.skill__svg-git{
-				display: block;
-				top: 50px;
-			}
-		}
-		&_cwars{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 0% 100%;
-			grid-template-rows: 0% 100% 0%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			.skill__svg-cwars{
-				display: block;
-				top: 50px;
-			}
-			.skill__link{
-				width: 130px;
-				height: 50px;
-				margin: 0 auto;
-				border: 2px solid #21DB7E;
-				font-size: 14px;
-				opacity: 1;
-				transition: all 0s;
-			}
-			.skill__paragraph-wrapper{
-				transition-delay: .75s;
-				width: 100%;
-				height: 100%;
-			}
-			.skill__paragraph{
-				transition-delay: .75s;
-				transition: all 1s;
-				opacity: 1;
-				margin-bottom: 20px;
-			}
-
-		}
-		&_js{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 100% 0%;
-			grid-template-rows: 0% 0% 100%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			.skill__svg-js{
-				display: block;
-				top: 50px;
-			}
-			.skill__git,
-			.skill__cwars{
-				border-bottom: none;
-			}
-		}
-		&_node{
-			.skill{
-				background: rgba(24, 24, 24, 0.8);
-			}
-			grid-template-columns: 0% 100%;
-			grid-template-rows: 0% 0% 100%;
-			transition: all 0s;
-			grid-gap: 10px;
-			.skill__svg{
-				transition: all .75s;
-				display: none;
-			}
-			.skill__svg-node{
-				display: block;
-				top: 50px;
-			}
-			.skill__git,
-			.skill__cwars{
-				border-bottom: none;
-			}
+		.skills__svg{
+			display: none;
 		}
 	}
 
+	&__scss{
+		grid-template-columns: 1fr 0px;
+		grid-template-rows: 1fr 0px 0px;
+		.skills__svg-scss{
+			display: block;
+		}
+	}
+	&__gulp{
+		grid-template-columns: 0px 1fr;
+		grid-template-rows: 1fr 0px 0px;
+		.skills__svg-gulp{
+			display: block;
+		}
+	}
+	&__git{
+		grid-template-columns: 1fr 0px;
+		grid-template-rows: 0px 1fr 0px;
+		.skills__svg-git{
+			display: block;
+		}
+	}
+	&__codewars{
+		grid-template-columns: 0px 1fr;
+		grid-template-rows: 0px 1fr 0px;
+		.skills__svg-codewars{
+			display: block;
+		}
+	}
+	&__js{
+		grid-template-columns: 1fr 0px;
+		grid-template-rows: 0px 0px 1fr;
+		.skills__svg-js{
+			display: block;
+		}
+	}
+	&__node{
+		grid-template-columns: 0px 1fr;
+		grid-template-rows: 0px 0px 1fr;
+		.skills__svg-node{
+			display: block;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(24, 24, 24, 0.1);
+		backdrop-filter: blur(3px);
+		transition: all .0s;
+		width: 100%;
+		height: 100%;
+		&:nth-child(1){
+			border-right: 4px solid #21DB7E;
+			border-bottom: 4px solid #21DB7E;
+		}
+		&:nth-child(2){
+			border-left: 4px solid #21DB7E;
+			border-bottom: 4px solid #21DB7E;
+		}
+		&:nth-child(3){
+			border-right: 4px solid #21DB7E;
+			border-top: 4px solid #21DB7E;
+			border-bottom: 4px solid #21DB7E;
+			// transition: all 0s;
+
+		}
+		&:nth-child(4){
+			border-left: 4px solid #21DB7E;
+			border-top: 4px solid #21DB7E;
+			border-bottom: 4px solid #21DB7E;
+			// transition: all 0s;
+		}
+		&:nth-child(5){
+			border-right: 4px solid #21DB7E;
+			border-top: 4px solid #21DB7E;
+		}
+		&:nth-child(6){
+			border-left: 4px solid #21DB7E;
+			border-top: 4px solid #21DB7E;
+		}
+		
+	}
+	&__item_active{
+		align-items: start;
+		transition: all .5s;
+		padding-top: 10px;
+		.skills__svg{
+			transform: scale(.7);
+		}
+	}
+	&__scss,
+	&__gulp,
+	&__js,
+	&__node{
+		.skills__item:nth-child(3),
+		.skills__item:nth-child(4){
+			border-top: none;
+		}
+	}
 
 	&__buttons{
 		width: 100%;
@@ -643,6 +602,8 @@ h2{
 		transition: all .75s;
 	}
 	&__paragraph-wrapper{
+		position: absolute;
+		z-index: -11;
 		padding: 100px 20px 0 20px;
 		overflow: hidden;
 		font-family: 'M1 PLUS 1';
@@ -660,11 +621,8 @@ h2{
 	}
 	&__svg{
 		fill: #21DB7E;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		transition: all 0s;
+		display: block;
+		transition: all 1s;
 
 	}
 	&__path{
@@ -683,7 +641,7 @@ h2{
 	}
 	&__js-path,
 	&__git-path,
-	&__svg-cwars,
+	&__svg-codewars,
 	&__svg-js,
 	&__svg-git{
 		width: 60px;
@@ -694,32 +652,7 @@ h2{
 		width: 58px;
 		height: 64px;
 	}
-	&__scss{
-		border-top: none;
-		border-left: none;
-		
-	}
-	&__gulp{
-		border-top: none;
-		border-right: none;
-	}
-	&__git{
-		border-left: none;
-		transition: all 0s;
-	}
-	&__cwars{
-		border-right: none;
-		transition: all 0s;
-	}
-	
-	&__js{
-		border-left: none;
-		border-bottom: none;
-	}
-	&__node{
-		border-right: none;
-		border-bottom: none;
-	}
+
 }
 .feedback {
 	margin-bottom: 0;

@@ -4,7 +4,7 @@ window.onload = function(){
 		preloader.classList.add("preloader__delete");
 		let page = document.querySelector(".page");
 		page.classList.add("page__loaded");
-	}, 3000);
+	}, 3);
 }
 
 document.querySelector(".burger").addEventListener("click", menu);
@@ -109,43 +109,70 @@ const swiperForm = new Swiper('.form__both-slider', {
 
 
 
+let skills = document.querySelectorAll('.skills .skills__item');
 
-document.querySelector(".skill__scss").addEventListener("click", skillScss);
-function skillScss() {
-	let skillScss = document.querySelector(".skill__container");
-	skillScss.classList.toggle("skill__container_scss");
+for(let i = 0; i < skills.length; i++){
+	skills[i].addEventListener('click', skillActive);
+	function skillActive(){
+		if([i] == 0){
+			if(this.parentElement.classList.contains('skills__scss')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__scss", "skills__active");
+				this.classList.add("skills__item_scss", "skills__item_active");
+			}
+		} else if([i] == 1){
+			if(this.parentElement.classList.contains('skills__gulp')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__gulp", "skills__active");
+				this.classList.add("skills__item_gulp", "skills__item_active");
+			}
+		} else if([i] == 2){
+			if(this.parentElement.classList.contains('skills__git')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__git", "skills__active");
+				this.classList.add("skills__item_git", "skills__item_active");
+			}
+		} else if([i] == 3){
+			if(this.parentElement.classList.contains('skills__codewars')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__codewars", "skills__active");
+				this.classList.add("skills__item_codewars", "skills__item_active");
+			}
+		} else if([i] == 4){
+			if(this.parentElement.classList.contains('skills__js')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__js", "skills__active");
+				this.classList.add("skills__item_js", "skills__item_active");
+			}
+		} else if([i] == 5){
+			if(this.parentElement.classList.contains('skills__node')){
+				this.parentElement.className = 'skills';
+				this.className = 'skills__item';
+			} else{
+				this.parentElement.classList.add("skills__node", "skills__active");
+				this.classList.add("skills__item_js", "skills__item_active");
+			}
+		}
+	}
+}
 
-}
-document.querySelector(".skill__scss").addEventListener("click", skillScss);
-function skillScss() {
-	let skillScss = document.querySelector(".skill__container");
-	skillScss.classList.toggle("skill__container_scss");
-}
-document.querySelector(".skill__gulp").addEventListener("click", skillGulp);
-function skillGulp() {
-	let skillGulp = document.querySelector(".skill__container");
-	skillGulp.classList.toggle("skill__container_gulp");
-}
-document.querySelector(".skill__git").addEventListener("click", skillGit);
-function skillGit() {
-	let skillGulp = document.querySelector(".skill__container");
-	skillGulp.classList.toggle("skill__container_git");
-}
-document.querySelector(".skill__cwars").addEventListener("click", skillCwars);
-function skillCwars() {
-	let skillCwars = document.querySelector(".skill__container");
-	skillCwars.classList.toggle("skill__container_cwars");
-}
-document.querySelector(".skill__js").addEventListener("click", skillJs);
-function skillJs() {
-	let skillJs = document.querySelector(".skill__container");
-	skillJs.classList.toggle("skill__container_js");
-}
-document.querySelector(".skill__node").addEventListener("click", skillNode);
-function skillNode() {
-	let skillNode = document.querySelector(".skill__container");
-	skillNode.classList.toggle("skill__container_node");
-}
+
+
+
+
+
+
+
 
 
 // ! Form
@@ -159,7 +186,6 @@ document.querySelector(".feedback__form").addEventListener("click", fillForm);
 function fillForm() {
 	let formActive = document.querySelector(".form__both");
 	formActive.classList.add("form__both_active");
-
 }
 
 document.querySelector(".form-close__both").addEventListener("click", removeFillForm);
