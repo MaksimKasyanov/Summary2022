@@ -284,7 +284,6 @@ h2{
 		color: #21DB7E;
 	}
 }
-
 .intro{
 	height: 100vh;
 	padding-left: 20px;
@@ -331,27 +330,23 @@ h2{
 		position: absolute;
 		right: -25px;
 		top: 50%;
-		transform: translateY(-50%);
+		// transform: translateY(-50%);
 		width: 50px;
 		height: 50px;
-		background-color: #181818;
+		// background-color: #181818;
 		z-index: 2;
 		border-radius: 50%;
-		border: 1px solid #fff;
-		box-shadow: 0px 0px 5px #fff;
 	}
 	&__case-nav{
 		position: absolute;
+		z-index: 9;
 		width: 50px;
 		height: 50px;
 		top: calc(50% - 25px);
 		right: -25px;
-		
-	}
-	&__case-rotate{
-		width: 90%;
-		position: absolute;
-		animation: portfolio__case-rotate 3s linear infinite both;
+		background-color: #181818;
+		border-radius: 50%;
+		border: 1px solid #fff;
 	}
 	&__bullets{
 		position: static;
@@ -373,6 +368,31 @@ h2{
 		box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.438);
 		background-color: #ffffff;
 	}
+	&__arrow{
+		position: absolute;
+		top: 50%;
+		height: 1px;
+		background-color: #fff;
+		transform: translateY(-50%);
+	}
+	&__arrow-left{
+		animation: arrow-left .7s ease-in-out infinite alternate-reverse both;
+		
+		left: 0px;
+	}
+	&__arrow-right{
+		animation: arrow-left .7s ease-in-out infinite alternate both;
+		transform: rotate(180deg);
+		right: 0px;
+	}
+	&__arrow-triangle{
+		position: absolute;
+		top: 50%;
+		right: -10px;
+		transform: translate(-50%, -50%);
+		border: 3px solid transparent;
+		border-left: 5px solid #fff;
+	}
 	&__slider{
 		height: 400px;
 		width: 230px;
@@ -388,6 +408,12 @@ h2{
 		z-index: -1;
 	}
 }
+@keyframes arrow-left {
+	0% {width: 8px;
+	}
+	100% {width: 20px;
+	}
+ }
 .case-one,
 .case-two,
 .case-three{
@@ -423,19 +449,16 @@ h2{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: #fff;
-		color: #000;
+		background-color: transparent;
+		// color: #000;
 		bottom: 0;
 		opacity: 1;
 		transition: all .5s;
 		border-radius: 50%;
-		border: 1px solid #181818;
+		// border: 1px solid #fff;
 	}
 	&__prev{
 		position: absolute;
-		background-repeat: no-repeat;
-		background-size: 90%;
-		background-position: center center;
 		
 	}
 }
@@ -562,7 +585,6 @@ h2{
 			border-top: none;
 		}
 	}
-
 	&__buttons{
 		width: 100%;
 		display: flex;
@@ -598,9 +620,7 @@ h2{
 		fill: #21DB7E;
 		display: block;
 		transition: all 1s;
-
 	}
-
 	&__item_active{
 		align-items: center;
 		justify-content: start;
@@ -642,7 +662,6 @@ h2{
 		width: 67px;
 		height: 57px;
 	}
-
 	&__gulp-path,
 	&__svg-gulp{
 		width: 37px;
@@ -661,7 +680,6 @@ h2{
 		width: 58px;
 		height: 64px;
 	}
-
 }
 .feedback {
 	margin-bottom: 0;
